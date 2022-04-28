@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Code"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Code">
+				<Option output="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug/Code.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/."/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 Code"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Code/fast">
+				<Option output="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug/Code.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/."/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 Code/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Documents/School/2021/B/76562\ -\ 3D\ Bio/Exercises/2/structAlign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/AminoAcid.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Atom.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Atom.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/GeomHash.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashLink.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashResult.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Match.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Match.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Molecule.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Rotation3.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Rotation3.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Triangle.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Triangle.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/macros.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/numerics.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/numerics.h">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/structAlign.cc">
+			<Option target="Code"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

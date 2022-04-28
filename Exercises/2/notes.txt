@@ -1,0 +1,48 @@
+3D-Bio Ex 2
+
+1) Write a program that detects an (almost) largest structural alignment between two proteins or two RNA molecules.
+
+2) Input to the program: is two structures in the PDB format
+
+3) Consider only Cα atoms for proteins and only phosphate atoms for RNA molecules
+
+4) Define transformations using triangles formed by 3 consecutive Cα atoms for proteins or phosphate atoms for nucleic acids
+
+5) only |pdb1|x|pdb2| transformations - meaning we need to calc (n-2)*(m-2) transformations 
+
+6) Name your program structAlign.cc and submit this file in ex2.tar.
+Please submit your code in ex2.tar: structAlign.cc, Makefile and a file with a table summarizing alignment size and RMSD for each input pair for epsilon = 1.0 and epsilon = 3.0
+
+7) How to run the program: structalign epsilon pdb1 pdb2
+where epsilon is the largest allowed distance between two corresponding atoms in the alignment
+
+8) The output from the program:
+{Size of the largest alignment} {RMSD between the aligned atoms} {3D transformation (3 rotational and 3 translational parameters)}
+For example:
+130 1.32 0.5 0.11 0.7 10.1 21.30 -10.1
+
+9) The transformation transforms pdb2 on pdb1. In addition, your program should create a transformed PDB file 'transformed.pdb' that contains the transformed
+pdb2. This file should contain all atoms (not only Cα or P atoms).
+
+10) Briefly, this is the relevant functionality:
+● Vector3 – basic 3D vector class for storing and manipulating xyz coordinates
+● RigidTrans3 – basic class for 3D rigid transformations that stores 3D rotation (Matrix3 class) and translation (Vector3 class).
+● Triangle – basic class for defining triangles and transformations.
+● Atom – stores the information from the PDB ATOM line that includes index, residue type, coordinates, etc
+● Molecule – template container for molecules
+● PDB – enables efficient PDB parsing. Use PDB::Selector to read specific parts of the PDB.
+● GeomHash – enables efficient hashing. Useful in building correspondence list, when you look for points that are within short distance from a given point
+● Match – this class implements a correspondence list. The function calculateBestFit computes a transformation that minimizes RMSD for the correspondence list that is stored in the class object.
+
+11) You don’t have to implement a bipartite matching algorithm to find the maximal correspondence in this assignment. Instead, you can rely on the
+shortest distance heuristics that is implemented by the Match class.
+
+1b7fA.pdb 1m5oC.pdb 200 1.0
+
+argv[0] - usage
+argv[1] - target file
+argv[2] - file model
+rgv[3] - number of random rotations to try
+argv[4] - distance threshold on atoms in correspondence
+שרת נוסף שאפשר לבדוק בו התאמה:
+https://fatcat.godziklab.org/fatcat/fatcat_pair.html

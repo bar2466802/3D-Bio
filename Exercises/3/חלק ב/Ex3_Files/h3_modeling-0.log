@@ -1,0 +1,986 @@
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.source.release-274 r274 2020.50+release.1295438 1295438cd4bd2be39c9dbbfab8db669ab62415ab https://www.rosettacommons.org 2020-12-13T21:33:15.479874
+core.init: command: antibody_H3.linuxgccrelease @abH3.flags -s grafting/model-0.relaxed.pdb -nstruct 1 -out:file:scorefile H3_modeling_scores.fasc -out:path:pdb H3_modeling
+basic.random.init_random_generator: 'RNG device' seed mode, using '/dev/urandom', seed=-1964816891 seed_offset=0 real_seed=-1964816891
+basic.random.init_random_generator: RandomGenerator:init: Normal mode, seed=-1964816891 RG_type=mt19937
+core.init: found database environment variable ROSETTA3_DB: /cs/labs/dina/tomer.cohen13/Rosetta/main/database
+protocols.antibody.AntibodyModelerProtocol: Setting Up defaults..........
+protocols.antibody.AntibodyModelerProtocol: Start Reading and Setting Options ...
+protocols.antibody.AntibodyModelerProtocol: Finish Reading and Setting Options !!!
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 985 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.819461 seconds.
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+basic.io.database: Database file opened: scoring/score_functions/PairEPotential/pdb_pair_stats_fine
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+core.scoring.ramachandran: shapovalov_lib::shap_rama_smooth_level of 4( aka highest_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/rama/shapovalov/kappa25/all.ramaProb
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.antibody.AntibodyModelerProtocol: Scorefunction before: ScoreFunction::show():
+weights: (fa_atr 0.338) (fa_rep 0.18568) (fa_sol 0.242) (fa_elec 0.026) (fa_pair 0.164) (hbond_sr_bb 0.245) (hbond_lr_bb 0.245) (hbond_bb_sc 0.245) (hbond_sc 0.245) (dslf_ss_dst 0.5) (dslf_cs_ang 2) (dslf_ss_dih 5) (dslf_ca_dih 5) (fa_dun 0.036) (chainbreak 1) (overlap_chainbreak 3.33333)
+energy_method_options: EnergyMethodOptions::show: aa_composition_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: mhc_epitope_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: netcharge_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: aspartimide_penalty_value: 25
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: etable_type: FA_STANDARD_DEFAULT
+analytic_etable_evaluation: 1
+EnergyMethodOptions::show: method_weights: free_res
+EnergyMethodOptions::show: unfolded_energies_type: UNFOLDED_SCORE12
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: split_unfolded_label_type: SPLIT_UNFOLDED_MM
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: split_unfolded_value_type: SPLIT_UNFOLDED_BOLTZ
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: atom_vdw_atom_type_set_name: centroid
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: covalent_labeling_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: covalent_labeling_fa_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hrf_dynamics_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_protein_protein_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_RNA_RNA_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_RNA_protein_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_monomer_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_max_dis: 5.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_min_dis: 1.6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_die: 10
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_no_dis_dep_die: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_die: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_D: 80
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_D0: 6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_S: 0.4
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: smooth_fa_elec: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_type: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_param1: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_param2: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_hbond: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grp_cpfxn: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_group_file: /scoring/score_functions/elec_group_def.dat
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_context_dependent: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: use_polarization: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: use_gen_kirkwood: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: protein_dielectric: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: water_dielectric: 78.3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_DNA_DNA: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_intra_res_protein: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: count_pair_hybrid: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: count_pair_full: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: put_intra_into_total: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: geom_sol_interres_path_distance_cutoff: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: geom_sol_intrares_path_distance_cutoff: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: eval_intrares_elec_ST_only: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: envsmooth_zero_negatives: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: cst_max_seq_sep: 18446744073709551615
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: pb_bound_tag: bound
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: pb_unbound_tag: unbound
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: arg_cation_pi_his_can_be_pi: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: ordered_wat_penalty: 1.221
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: ordered_pt_wat_penalty: 2.709
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_ref_seq_length_: 9
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_term_length_: 3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_pssm_feat_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_scorecut_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_scorecut_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_avg_rank_as_energy_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_aa_matrix_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_aa_matrix_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_list_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_list_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_list_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_list_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_containing_cones_cutoff_:6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_cone_distance_cutoff_: 8
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_cone_dotproduct_cutoff_: 0.1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_voxel_grid_padding_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_voxel_size_: 0.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_disabled_except_during_packing_: TRUE
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hbnet_bonus_ramping_function_: "quadratic"
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hbnet_max_network_size_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_energy_threshold_: -0.25
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_atomic_depth_: 4.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_probe_radius_: 2.3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_resolution_: 0.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_oversat_penalty_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_assume_const_backbone_:1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_natural_corrections1_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_bonus_cross_chain_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_bonus_ser_to_helix_bb_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: target_clash_pdb_:
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_prefix_: traj
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_gz_: FALSE
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_stride_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: bond_angle_central_atoms_to_score:
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: bond_angle_residue_type_param_set: none
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: hb_max_energy: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_DNA_DNA: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_intra_res_protein_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_intra_res_RNA_: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: put_intra_into_total_: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_self_hbonds: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_hb_env_dep: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_hb_env_dep_DNA: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: smooth_hb_env_dep: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: bb_donor_acceptor_check: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: decompose_bb_hb_into_pair_energies: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: params_database_tag_: ref2015_params
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_sp2_chi_penalty_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: sp2_BAH180_rise_: 0.75
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: sp2_outer_width_: 0.357
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: measure_sp3acc_BAH_from_hvy_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: fade_energy_: 1
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_ether_oxygens_: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: Mbhbond: false 
+protocols.antibody.AntibodyModelerProtocol: HbondOptions::show: mphbond: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: hbond_energy_shift: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: water_hybrid_sf: false
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: syn_G_potential_bonus: 0
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: torsion_potential: ps_04282011
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: suiteness_bonus: Richardson
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: rna_base_pair_xy_filename: scoring/rna/rna_base_pair_xy.dat
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_suite_bonus: -1
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_2HOprime_bonus: -0.5
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_sugar_bonus: -1
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: pack_phosphate_penalty: 0.25
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_side_chain_bonus: -0.5
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: Scorefunction after: ScoreFunction::show():
+weights: (fa_atr 0.338) (fa_rep 0.18568) (fa_sol 0.242) (fa_elec 0.026) (fa_pair 0.164) (hbond_sr_bb 0.245) (hbond_lr_bb 0.245) (hbond_bb_sc 0.245) (hbond_sc 0.245) (dslf_ss_dst 0.5) (dslf_cs_ang 2) (dslf_ss_dih 5) (dslf_ca_dih 5) (fa_dun 0.036) (chainbreak 1) (overlap_chainbreak 3.33333)
+energy_method_options: EnergyMethodOptions::show: aa_composition_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: mhc_epitope_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: netcharge_setup_files: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: aspartimide_penalty_value: 25
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: etable_type: FA_STANDARD_DEFAULT
+analytic_etable_evaluation: 1
+EnergyMethodOptions::show: method_weights: free_res
+EnergyMethodOptions::show: unfolded_energies_type: UNFOLDED_SCORE12
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: split_unfolded_label_type: SPLIT_UNFOLDED_MM
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: split_unfolded_value_type: SPLIT_UNFOLDED_BOLTZ
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: atom_vdw_atom_type_set_name: centroid
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: covalent_labeling_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: covalent_labeling_fa_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hrf_dynamics_input: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_protein_protein_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_RNA_RNA_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_RNA_protein_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_monomer_fa_elec: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_max_dis: 5.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_min_dis: 1.6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_die: 10
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_no_dis_dep_die: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_die: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_D: 80
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_D0: 6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_sigmoidal_S: 0.4
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: smooth_fa_elec: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_type: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_param1: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_param2: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_fade_hbond: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grp_cpfxn: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: elec_group_file: /scoring/score_functions/elec_group_def.dat
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: grpelec_context_dependent: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: use_polarization: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: use_gen_kirkwood: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: protein_dielectric: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: water_dielectric: 78.3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_DNA_DNA: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: exclude_intra_res_protein: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: count_pair_hybrid: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: count_pair_full: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: put_intra_into_total: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: geom_sol_interres_path_distance_cutoff: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: geom_sol_intrares_path_distance_cutoff: true
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: eval_intrares_elec_ST_only: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: envsmooth_zero_negatives: false
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: cst_max_seq_sep: 18446744073709551615
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: pb_bound_tag: bound
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: pb_unbound_tag: unbound
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: arg_cation_pi_his_can_be_pi: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: ordered_wat_penalty: 1.221
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: ordered_pt_wat_penalty: 2.709
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_ref_seq_length_: 9
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_term_length_: 3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_pssm_feat_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_scorecut_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_scorecut_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_avg_rank_as_energy_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_aa_matrix_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_aa_matrix_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_list_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_list_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_list_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_list_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_defined_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: nmer_svm_rank_: 
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_containing_cones_cutoff_:6
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_cone_distance_cutoff_: 8
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_cone_dotproduct_cutoff_: 0.1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_voxel_grid_padding_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_voxel_size_: 0.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: voids_penalty_energy_disabled_except_during_packing_: TRUE
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hbnet_bonus_ramping_function_: "quadratic"
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: hbnet_max_network_size_: 0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_energy_threshold_: -0.25
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_atomic_depth_: 4.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_probe_radius_: 2.3
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_burial_resolution_: 0.5
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_oversat_penalty_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_assume_const_backbone_:1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_natural_corrections1_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_bonus_cross_chain_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: approximate_buried_unsat_penalty_hbond_bonus_ser_to_helix_bb_:0
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: target_clash_pdb_:
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_prefix_: traj
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_gz_: FALSE
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: dump_trajectory_stride_: 1
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: bond_angle_central_atoms_to_score:
+protocols.antibody.AntibodyModelerProtocol: EnergyMethodOptions::show: bond_angle_residue_type_param_set: none
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: hb_max_energy: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_DNA_DNA: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_intra_res_protein_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_intra_res_RNA_: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: put_intra_into_total_: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_self_hbonds: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_hb_env_dep: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_hb_env_dep_DNA: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: smooth_hb_env_dep: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: bb_donor_acceptor_check: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: decompose_bb_hb_into_pair_energies: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: params_database_tag_: ref2015_params
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: use_sp2_chi_penalty_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: sp2_BAH180_rise_: 0.75
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: sp2_outer_width_: 0.357
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: measure_sp3acc_BAH_from_hvy_: true
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: fade_energy_: 1
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: exclude_ether_oxygens_: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: Mbhbond: false 
+protocols.antibody.AntibodyModelerProtocol: HbondOptions::show: mphbond: false
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: hbond_energy_shift: 0
+protocols.antibody.AntibodyModelerProtocol: HBondOptions::show: water_hybrid_sf: false
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: syn_G_potential_bonus: 0
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: torsion_potential: ps_04282011
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: suiteness_bonus: Richardson
+protocols.antibody.AntibodyModelerProtocol: RNA_EnergyMethodOptions::show: rna_base_pair_xy_filename: scoring/rna/rna_base_pair_xy.dat
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_suite_bonus: -1
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_2HOprime_bonus: -0.5
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_sugar_bonus: -1
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: pack_phosphate_penalty: 0.25
+protocols.antibody.AntibodyModelerProtocol: FreeDOF_Options::show: free_side_chain_bonus: -0.5
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody: ////////////////////////////////////////////////////////////////////////////////
+protocols.antibody: ///
+protocols.antibody: ///                     Rosetta 3 Antibody Modeler                           ///
+protocols.antibody: ///                                                                          ///
+protocols.antibody: ///
+protocols.antibody: /// ******  model_h3  :  1
+protocols.antibody: ///
+protocols.antibody: /// ******  snugfit   :  0
+protocols.antibody: ///         LH_repulsive_ramp   = 1
+protocols.antibody: ///
+protocols.antibody: /// ******  loop_constraints_lr :  1
+protocols.antibody: ///
+protocols.antibody: /// ******  loop_constraints_hr :  1
+protocols.antibody: ///
+protocols.antibody: /// ******  h3_kink_constraint :  1
+protocols.antibody: ///
+protocols.antibody: /// ******  vlvh_qq_constraint :  0
+protocols.antibody: ///
+protocols.antibody: ////////////////////////////////////////////////////////////////////////////////
+protocols.antibody: 
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed grafting/model-0.relaxed.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB grafting/model-0.relaxed.pdb
+core.import_pose.import_pose: File 'grafting/model-0.relaxed.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+protocols.antibody.AntibodyModelerProtocol: Danger Will Robinson! Native is an impostor!
+protocols.antibody.AntibodyModelerProtocol:    'native_pose' is just a copy of the 'input_pose'    
+protocols.antibody.AntibodyModelerProtocol:     since you didn't sepcifiy the native pdb name
+basic.io.database: Database file opened: sampling/antibodies/cluster_center_dihedrals.txt
+protocols.antibody.AntibodyNumberingParser: Antibody numbering scheme definitions read successfully
+protocols.antibody.AntibodyNumberingParser: Antibody CDR definition read successfully
+antibody.AntibodyInfo: Successfully finished the CDR definition
+antibody.AntibodyInfo:  Could not setup Vl Vh Packing angle for camelid antibody
+antibody.AntibodyInfo: AC Detecting Camelid CDR H3 Stem Type
+antibody.AntibodyInfo: AC Finished Detecting Camelid CDR H3 Stem Type: NEUTRAL
+antibody.AntibodyInfo: Setting up CDR Cluster for H1
+protocols.antibody.cluster.CDRClusterMatcher: Length: 13 Omega: TTTTTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H2
+protocols.antibody.cluster.CDRClusterMatcher: Length: 10 Omega: TTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H3
+protocols.antibody.cluster.CDRClusterMatcher: Length: 19 Omega: TTTTTTTTTTTTTTTTTTT
+protocols.antibody.AntibodyModelerProtocol: ////////////////////////////////////////////////////////////////////////////////
+protocols.antibody.AntibodyModelerProtocol: ///                          Rosetta Antibody Info                           ///
+protocols.antibody.AntibodyModelerProtocol: ///                                                                          ///
+protocols.antibody.AntibodyModelerProtocol: ///             Antibody Type:  Camelid Antibody
+protocols.antibody.AntibodyModelerProtocol: ///             Light Chain Type:  unknown
+protocols.antibody.AntibodyModelerProtocol: /// Predict H3 Cterminus Base:  NEUTRAL
+protocols.antibody.AntibodyModelerProtocol: ///                                                                          
+protocols.antibody.AntibodyModelerProtocol: /// H1 info: 
+protocols.antibody.AntibodyModelerProtocol: ///            length:  10
+protocols.antibody.AntibodyModelerProtocol: ///          sequence:  GYTFTDYHIN
+protocols.antibody.AntibodyModelerProtocol: ///     north_cluster:  H1-13-2
+protocols.antibody.AntibodyModelerProtocol: ///         loop_info:  LOOP start: 26  stop: 35  cut: 31  size: 10  skip rate: 0  extended?: False
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: /// H2 info: 
+protocols.antibody.AntibodyModelerProtocol: ///            length:  17
+protocols.antibody.AntibodyModelerProtocol: ///          sequence:  WIHPNSGDTNYAQKFQG
+protocols.antibody.AntibodyModelerProtocol: ///     north_cluster:  H2-10-1
+protocols.antibody.AntibodyModelerProtocol: ///         loop_info:  LOOP start: 50  stop: 66  cut: 58  size: 17  skip rate: 0  extended?: False
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: /// H3 info: 
+protocols.antibody.AntibodyModelerProtocol: ///            length:  17
+protocols.antibody.AntibodyModelerProtocol: ///          sequence:  AGLHPTTTEYYYYGMDV
+protocols.antibody.AntibodyModelerProtocol: ///     north_cluster:  H3-19-1
+protocols.antibody.AntibodyModelerProtocol: ///         loop_info:  LOOP start: 99  stop: 115  cut: 100  size: 17  skip rate: 0  extended?: False
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: ////////////////////////////////////////////////////////////////////////////////
+protocols.antibody.AntibodyModelerProtocol: 
+core.chemical.GlobalResidueTypeSet: Finished initializing centroid residue type set.  Created 69 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.033593 seconds.
+protocols.antibody.AntibodyModelerProtocol: Centroid cst_weight: 1
+antibody.util:  Automatically setting kink constraint! 
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loop_modeler.LoopModeler: Set default task factory.
+protocols.loop_modeler.LoopModeler: 1
+protocols.loop_modeler.LoopModeler: *******************************************
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler:    Build Stage                             
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler: *******************************************
+core.scoring.Ramachandran2B: Read in ramachandran map: scoring/score_functions/rama/Rama08.dat
+basic.io.database: Database file opened: scoring/score_functions/rama/Rama08.dat
+core.scoring.Ramachandran2B: Reading Rama from database took 1.19614 seconds
+protocols.loop_modeling.LoopBuilder: Final Score: -11.918 REU; Chainbreak: 0.076 REU
+protocols.loop_modeling.LoopBuilder: Elapsed Time: 1 sec
+protocols.loop_modeler.LoopModeler: *******************************************
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler:    Centroid Stage                          
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler: *******************************************
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loop_modeling.LoopProtocol: sfxn_cycles:    5
+protocols.loop_modeling.LoopProtocol: temp_cycles:    380
+protocols.loop_modeling.LoopProtocol: mover_cycles:   1
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_rep:  0
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_rama: 0
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_cst:  0
+protocols.loop_modeling.LoopProtocol: ramp_temp:      1
+protocols.loop_modeling.LoopProtocol: initial_temp:   2
+protocols.loop_modeling.LoopProtocol: final_temp:     1
+protocols.loop_modeling.LoopProtocol: loop_movers:    KicMover
+protocols.loop_modeling.LoopProtocol: loop_movers:      StandardPivots
+protocols.loop_modeling.LoopProtocol: loop_movers:      Rama2bPerturber
+protocols.loop_modeling.LoopProtocol: loop_movers:      OmegaPerturber
+protocols.loop_modeling.LoopProtocol: loop_movers:    MinimizationRefiner
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.12469 Finite Diff= 0.102434
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.120337 Finite Diff= 0.0142496
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -1.18936 Finite Diff= 2.05533
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0532933 Finite Diff= 0.17347
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0211449 Finite Diff= 0.0280857
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.418381 Finite Diff= 1.01683
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.17313 Finite Diff= 0.345788
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0620894 Finite Diff= 0.00995062
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.144732 Finite Diff= 0.341643
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.308855 Finite Diff= 1.22117
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.458133 Finite Diff= 2.68376
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.459756 Finite Diff= 2.69953
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -5.56968 Finite Diff= 7.36246
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.453633 Finite Diff= 2.60367
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -4.10459 Finite Diff= 0.745316
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.166353 Finite Diff= 0.203318
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0619355 Finite Diff= 0.188224
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.19209e-07 Deriv= -1.5123 Finite Diff= 6.32095
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0991463 Finite Diff= 0.00258125
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.531221 Finite Diff= 0.886314
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.213801 Finite Diff= 0.35916
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.213212 Finite Diff= -0.00226479
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0404975 Finite Diff= 0.159753
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.819631 Finite Diff= 0.383817
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.253559 Finite Diff= 0.688218
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.160424 Finite Diff= 0.745065
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.175936 Finite Diff= 1.02759
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.201703 Finite Diff= 0.121828
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.929147 Finite Diff= 0.427954
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.583677 Finite Diff= 0.0254497
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.294158 Finite Diff= 0.0912167
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.918035 Finite Diff= 5.54615
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.25825 Finite Diff= 0.495438
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0937673 Finite Diff= 0.174281
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.141606 Finite Diff= 0.243642
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.28799 Finite Diff= -0.176348
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.112658 Finite Diff= 0.616245
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0203363 Finite Diff= 0.066238
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.794025 Finite Diff= 0.338354
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.338093 Finite Diff= 2.39303
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.977028 Finite Diff= 0.00691395
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.973151 Finite Diff= 0.0316469
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.253729 Finite Diff= 0.166866
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.357126 Finite Diff= 0.0269057
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.152722 Finite Diff= 1.34371
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.344476 Finite Diff= 1.1877
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.131446 Finite Diff= 0.188262
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.080573 Finite Diff= 0.052877
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0657346 Finite Diff= 0.0107564
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.364455 Finite Diff= 0.0484368
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0870276 Finite Diff= 0.048361
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.27981 Finite Diff= 0.287577
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 5.96046e-08 Deriv= -0.572141 Finite Diff= 6.22992
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.112639 Finite Diff= 0.0110729
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.439747 Finite Diff= 0.18373
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.113465 Finite Diff= 0.374086
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.114474 Finite Diff= 0.257516
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -0.386031 Finite Diff= 1.21341
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.19209e-07 Deriv= -0.708197 Finite Diff= 2.42785
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.11285 Finite Diff= 0.367356
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.123819 Finite Diff= 0.199943
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.215858 Finite Diff= 0.773817
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.256194 Finite Diff= -0.0164713
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.14712 Finite Diff= 0.835176
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.57391 Finite Diff= 1.04732
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.18571 Finite Diff= 0.123823
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.810413 Finite Diff= 1.03716
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.5527 Finite Diff= 1.94527
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.40988 Finite Diff= 2.27806
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.70097 Finite Diff= 0.704737
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.311593 Finite Diff= 0.286101
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.398948 Finite Diff= 1.94689
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.229298 Finite Diff= 0.680213
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.180298 Finite Diff= 0.583104
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.220468 Finite Diff= 0.615607
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.44141e-06 Deriv= -0.248684 Finite Diff= 0.445536
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.4933 Finite Diff= 0.0276737
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.43267 Finite Diff= 0.5267
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.32807 Finite Diff= 0.0731656
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.33642 Finite Diff= 0.389419
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.590182 Finite Diff= -0.0269355
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.44694 Finite Diff= 1.1526
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.080939 Finite Diff= 0.448555
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.307617 Finite Diff= -0.0163417
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0661266 Finite Diff= -0.00377707
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.65961 Finite Diff= 0.976526
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.360206 Finite Diff= 0.218871
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.357988 Finite Diff= 0.0651522
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.365316 Finite Diff= 0.0858264
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.184448 Finite Diff= 0.417821
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.345336 Finite Diff= 0.0161568
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.341336 Finite Diff= 0.039175
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.323173 Finite Diff= 0.100823
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.317883 Finite Diff= 0.0969732
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.460092 Finite Diff= 0.0371374
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.45409 Finite Diff= 0.42387
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.234585 Finite Diff= 0.403124
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0827491 Finite Diff= 0.112618
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.124412 Finite Diff= 0.161308
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -0.583003 Finite Diff= 3.78554
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.8068 Finite Diff= 1.99912
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.398282 Finite Diff= 0.869326
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.279263 Finite Diff= 0.240321
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -1.2935 Finite Diff= 1.88988
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.892722 Finite Diff= 0.924764
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0786024 Finite Diff= 0.030585
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.831843 Finite Diff= 0.867802
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.0709 Finite Diff= 2.14235
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.841554 Finite Diff= 0.467791
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.904589 Finite Diff= 1.23353
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.09724 Finite Diff= -0.0606202
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.275031 Finite Diff= 0.437012
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.147989 Finite Diff= 0.0122063
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.202615 Finite Diff= 0.525461
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.771784 Finite Diff= 0.941886
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.272592 Finite Diff= 0.169504
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.278297 Finite Diff= 0.085697
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.347577 Finite Diff= 1.43955
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-09 Deriv= -2.35748 Finite Diff= 1.44284
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.92953 Finite Diff= 7.61096
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.576582 Finite Diff= 1.69495
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.310537 Finite Diff= 0.0131574
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.273245 Finite Diff= 0.985354
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.9566 Finite Diff= 0.770653
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.05176e-07 Deriv= -1.34933 Finite Diff= 1.3483
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.07223 Finite Diff= 0.28468
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0875572 Finite Diff= 0.075186
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.596916 Finite Diff= 3.7169
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -4.20567 Finite Diff= 0.918998
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.15914 Finite Diff= 5.05183
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.23616 Finite Diff= 1.27484
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.656112 Finite Diff= 3.94527
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.558405 Finite Diff= 1.0978
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.631943 Finite Diff= 4.10032
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.636286 Finite Diff= 4.02901
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.622086 Finite Diff= 3.53063
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.474033 Finite Diff= 3.7752
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.470618 Finite Diff= 4.43219
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.36432 Finite Diff= 3.19655
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.244 Finite Diff= 1.0595
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.371908 Finite Diff= 0.477522
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -1.15546 Finite Diff= 5.06703
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.18813 Finite Diff= 0.390093
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.183325 Finite Diff= 1.2054
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0524643 Finite Diff= 0.0718058
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0417274 Finite Diff= 0.188874
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.457496 Finite Diff= 0.427993
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.230913 Finite Diff= 0.0111414
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -3.94189 Finite Diff= -0.145194
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.134666 Finite Diff= 0.322917
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.03961 Finite Diff= 2.05934
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.04323 Finite Diff= 2.05347
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.02245 Finite Diff= 2.07905
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.13333 Finite Diff= 1.47913
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.11565 Finite Diff= 0.894104
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.12373 Finite Diff= 0.994077
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.111265 Finite Diff= 0.283688
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.243732 Finite Diff= 0.00543352
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -2.00669 Finite Diff= 1.74117
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.77348e-09 Deriv= -1.45269 Finite Diff= 0.248327
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.6868e-06 Deriv= -8.06322 Finite Diff= -0.695799
+core.optimization.Minimizer: Line search failed even after resetting Hessian; aborting at iter#32
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.256709 Finite Diff= 0.0189804
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -4.44896 Finite Diff= -0.173945
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.856148 Finite Diff= 0.798149
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.418297 Finite Diff= 2.70878
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.402754 Finite Diff= 2.58948
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.528007 Finite Diff= 0.600192
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.124616 Finite Diff= 0.88043
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0705874 Finite Diff= 0.456412
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.0549821 Finite Diff= 0.106961
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0605161 Finite Diff= -0.002506
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.04291 Finite Diff= 0.0790987
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.296973 Finite Diff= 0.0796847
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.04226 Finite Diff= 0.103811
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0736318 Finite Diff= 0.117608
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.434382 Finite Diff= 0.934389
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.340421 Finite Diff= 0.0168076
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.138744 Finite Diff= 0.0372212
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.0975275 Finite Diff= 0.313233
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.735059 Finite Diff= 1.06042
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.709715 Finite Diff= 0.466947
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.116345 Finite Diff= 0.437873
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0310606 Finite Diff= 0.0453941
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.347977 Finite Diff= 0.116409
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 5.96046e-08 Deriv= -1.0201 Finite Diff= 6.24965
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.390869 Finite Diff= 0.935746
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.28683 Finite Diff= 0.0602532
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.166992 Finite Diff= 0.133537
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.377554 Finite Diff= 1.02954
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.373489 Finite Diff= 1.03627
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.373572 Finite Diff= 0.705738
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.141819 Finite Diff= 0.878164
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.112252 Finite Diff= 0.262414
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0270701 Finite Diff= 0.135738
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0447563 Finite Diff= 0.138978
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -1.99687 Finite Diff= 7.01969
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.169434 Finite Diff= 0.300948
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.171197 Finite Diff= 0.324155
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.190801 Finite Diff= 0.473149
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.259937 Finite Diff= 0.165364
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0882849 Finite Diff= 0.405897
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.084577 Finite Diff= 0.251124
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.195019 Finite Diff= 0.238698
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.824512 Finite Diff= 0.245546
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.802871 Finite Diff= 0.245619
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.146691 Finite Diff= 0.15134
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.159637 Finite Diff= 0.160102
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.276822 Finite Diff= 0.360811
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.377249 Finite Diff= 0.176919
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.274897 Finite Diff= 0.279393
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.194861 Finite Diff= 0.174388
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0330043 Finite Diff= 0.0457613
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.179629 Finite Diff= 0.537849
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.239107 Finite Diff= 0.0488648
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.242589 Finite Diff= 0.06778
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0704399 Finite Diff= 0.0656476
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.439736 Finite Diff= 0.0383366
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.324604 Finite Diff= 1.55935
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.146994 Finite Diff= 0.426814
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.098346 Finite Diff= 0.0414236
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.392932 Finite Diff= 2.58885
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.622869 Finite Diff= 2.57859
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.136112 Finite Diff= 0.273303
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.134551 Finite Diff= 0.256003
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.256158 Finite Diff= 0.563645
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.173656 Finite Diff= 0.456305
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.167284 Finite Diff= 0.487422
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 7.45058e-09 Deriv= -1.05334 Finite Diff= 0.0948334
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.929146 Finite Diff= 0.458859
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.674893 Finite Diff= -0.0562724
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.390009 Finite Diff= 0.422396
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.22835 Finite Diff= 0.0602223
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.229142 Finite Diff= 0.0569828
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.22535 Finite Diff= 0.0789106
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.132979 Finite Diff= 0.349066
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.22626 Finite Diff= 1.03679
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.250665 Finite Diff= 0.391719
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0158291 Finite Diff= 0.141204
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.08162 Finite Diff= 0.0195824
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.08245 Finite Diff= 0.0799304
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.01416 Finite Diff= -0.0828147
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.981624 Finite Diff= -0.095059
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.02206 Finite Diff= -0.0761988
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -0.279468 Finite Diff= 0.813035
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.744577 Finite Diff= 0.398356
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.160171 Finite Diff= 0.0684787
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.156719 Finite Diff= 0.0605881
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.530072 Finite Diff= 0.311882
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.526361 Finite Diff= 0.509381
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.529293 Finite Diff= 0.157386
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.141939 Finite Diff= 0.251234
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.232052 Finite Diff= 0.216369
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.350681 Finite Diff= 0.191274
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.295293 Finite Diff= -0.00356901
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.236851 Finite Diff= 0.167052
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0760516 Finite Diff= 0.0534515
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.666894 Finite Diff= -0.0165738
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.482859 Finite Diff= 0.00390783
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 2.38419e-07 Deriv= -0.374175 Finite Diff= 2.29699
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.615888 Finite Diff= 3.71438
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.285611 Finite Diff= 0.190715
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.186894 Finite Diff= 0.0337653
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.10263 Finite Diff= 0.22646
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.957545 Finite Diff= 3.21032
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0307116 Finite Diff= 0.0626712
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.389932 Finite Diff= 2.5539
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.121071 Finite Diff= 0.0180787
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.491337 Finite Diff= 2.3586
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.19209e-07 Deriv= -2.86233 Finite Diff= 5.32501
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.79521 Finite Diff= 1.74035
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.77519 Finite Diff= 1.61917
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.232767 Finite Diff= 0.373304
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.156284 Finite Diff= 0.184531
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.79926 Finite Diff= 1.53184
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.78769 Finite Diff= 1.69103
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.11276 Finite Diff= 0.67857
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.31063 Finite Diff= 0.516888
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.42894 Finite Diff= 1.07633
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.02872 Finite Diff= 0.377133
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.66849 Finite Diff= 0.305572
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.13113 Finite Diff= 0.974802
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.28679 Finite Diff= 2.97939
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.33119 Finite Diff= 3.0119
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.32434 Finite Diff= 3.00562
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.32 Finite Diff= 3.01612
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0814376 Finite Diff= 0.301333
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.32949 Finite Diff= 2.93421
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.31357 Finite Diff= 3.01522
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -5.09771 Finite Diff= 0.860352
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.44121 Finite Diff= 2.98819
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.51075 Finite Diff= 3.90905
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.251963 Finite Diff= 0.103702
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.756 Finite Diff= 1.90659
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.80309 Finite Diff= 4.40681
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -3.29488 Finite Diff= 4.5387
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.70527 Finite Diff= 4.19032
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -2.86762 Finite Diff= 2.76011
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.706435 Finite Diff= 0.19006
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.102297 Finite Diff= 0.357864
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.763155 Finite Diff= 0.0490332
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.29296 Finite Diff= 0.388732
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.165788 Finite Diff= 0.161512
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.751788 Finite Diff= 0.598154
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.57532 Finite Diff= 2.56232
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.01087 Finite Diff= 2.69812
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.56117 Finite Diff= 2.5752
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.56733 Finite Diff= 2.57998
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.23327 Finite Diff= 2.58115
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.10714 Finite Diff= 1.36935
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.13627 Finite Diff= 2.69003
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.19613 Finite Diff= 2.57472
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.900575 Finite Diff= 2.37643
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.24515 Finite Diff= 1.67373
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.06502 Finite Diff= 2.83575
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.639209 Finite Diff= 0.193063
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.375426 Finite Diff= 0.522697
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0272409 Finite Diff= 0.0287
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.120959 Finite Diff= 0.312795
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0287503 Finite Diff= 0.0326853
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.749831 Finite Diff= -0.0206633
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.100388 Finite Diff= 0.0328992
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.1023 Finite Diff= -0.00738222
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.112877 Finite Diff= 0.0569653
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.404708 Finite Diff= 1.86839
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.36286 Finite Diff= -0.124929
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -5.76512 Finite Diff= 1.38573
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0634687 Finite Diff= 0.0519229
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.24194 Finite Diff= 1.04936
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.145551 Finite Diff= 0.0367798
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0921793 Finite Diff= 0.145437
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0872358 Finite Diff= 0.0440789
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.219817 Finite Diff= 0.68604
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.439497 Finite Diff= -0.0030091
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.890131 Finite Diff= 0.0659734
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.302217 Finite Diff= 0.117845
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0948353 Finite Diff= 0.117288
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.40481 Finite Diff= 0.290994
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.459492 Finite Diff= 0.717848
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0951041 Finite Diff= 0.00263117
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.468438 Finite Diff= 1.72706
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.264964 Finite Diff= 1.03941
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.519248 Finite Diff= 2.33839
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.0774043 Finite Diff= 0.0763022
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.182655 Finite Diff= 0.288322
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.238635 Finite Diff= 0.466912
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.318783 Finite Diff= 0.87458
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.483087 Finite Diff= 1.18787
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.28972 Finite Diff= 0.82141
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.472697 Finite Diff= 0.212409
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.0969166 Finite Diff= 0.468556
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.256904 Finite Diff= 0.65331
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.176892 Finite Diff= -0.016739
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 4.76837e-07 Deriv= -0.312081 Finite Diff= 1.18015
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.470113 Finite Diff= 0.108534
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.398951 Finite Diff= 1.34249
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 9.53674e-07 Deriv= -0.314213 Finite Diff= 1.53091
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0388467 Finite Diff= 0.00691507
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-06 Deriv= -0.179043 Finite Diff= 0.350604
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 1.90735e-06 Deriv= -0.579719 Finite Diff= 0.367089
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0728357 Finite Diff= 0.108472
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.22345 Finite Diff= 0.113375
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.0754926 Finite Diff= 0.144404
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.110538 Finite Diff= 0.1425
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.111294 Finite Diff= 0.122884
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.110758 Finite Diff= 0.219572
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -0.22277 Finite Diff= 0.0175569
+protocols.loop_modeling.LoopProtocol: Final Score: -36.991 REU; Chainbreak: 0.053 REU
+protocols.loop_modeling.LoopProtocol: Elapsed Time: 79 sec
+protocols.antibody.AntibodyModelerProtocol: Full-atom cst_weight: 1
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.antibody.CDRsMinPackMin: FOLD_TREE  EDGE 1 25 -1  EDGE 25 31 -1  EDGE 25 36 1  EDGE 36 32 -1  EDGE 36 49 -1  EDGE 49 58 -1  EDGE 49 67 2  EDGE 67 59 -1  EDGE 67 98 -1  EDGE 98 100 -1  EDGE 98 116 3  EDGE 116 101 -1  EDGE 116 125 -1 
+protocols.loops.loops_main: Added cutpoint variant to residue 31
+protocols.loops.loops_main: Added cutpoint variant to residue 32
+protocols.loops.loops_main: Added cutpoint variant to residue 58
+protocols.loops.loops_main: Added cutpoint variant to residue 59
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+basic.io.database: Database file opened: scoring/score_functions/elec_cp_reps.dat
+core.scoring.elec.util: Read 40 countpair representative atoms
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.138458 seconds to load from binary
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 6540 rotamers at 85 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loop_modeler.LoopModeler: Set default task factory.
+protocols.loop_modeler.LoopModeler: 1
+protocols.loop_modeler.LoopModeler: *******************************************
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler:    Fullatom Stage                          
+protocols.loop_modeler.LoopModeler:                                            
+protocols.loop_modeler.LoopModeler: *******************************************
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+protocols.loop_modeling.LoopProtocol: sfxn_cycles:    5
+protocols.loop_modeling.LoopProtocol: temp_cycles:    190
+protocols.loop_modeling.LoopProtocol: mover_cycles:   2
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_rep:  1
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_rama: 1
+protocols.loop_modeling.LoopProtocol: ramp_sfxn_cst:  0
+protocols.loop_modeling.LoopProtocol: ramp_temp:      1
+protocols.loop_modeling.LoopProtocol: initial_temp:   1.5
+protocols.loop_modeling.LoopProtocol: final_temp:     0.5
+protocols.loop_modeling.LoopProtocol: loop_movers:    KicMover
+protocols.loop_modeling.LoopProtocol: loop_movers:      StandardPivots
+protocols.loop_modeling.LoopProtocol: loop_movers:      Rama2bPerturber
+protocols.loop_modeling.LoopProtocol: loop_movers:      OmegaPerturber
+protocols.loop_modeling.LoopProtocol: loop_movers:    RepackingRefiner
+protocols.loop_modeling.LoopProtocol: loop_movers:    RotamerTrialsRefiner
+protocols.loop_modeling.LoopProtocol: loop_movers:    MinimizationRefiner
+core.pack.pack_rotamers: built 3542 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3903 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3271 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3355 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3379 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3440 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3294 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3341 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3453 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3369 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3401 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3456 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3487 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3499 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3187 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2998 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3504 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3556 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3352 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2887 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3345 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3402 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3039 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3360 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3396 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2874 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3722 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3059 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3312 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3275 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3198 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3368 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3193 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3197 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3070 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2376 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3066 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3269 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3002 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2248 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3029 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 3015 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2968 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.pack_rotamers: built 2908 rotamers at 44 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.loop_modeling.LoopProtocol: Final Score: -317.377 REU; Chainbreak: 0.007 REU
+protocols.loop_modeling.LoopProtocol: Elapsed Time: 1932 sec
+protocols.antibody.CDRsMinPackMin: FOLD_TREE  EDGE 1 25 -1  EDGE 25 31 -1  EDGE 25 36 1  EDGE 36 32 -1  EDGE 36 49 -1  EDGE 49 58 -1  EDGE 49 67 2  EDGE 67 59 -1  EDGE 67 98 -1  EDGE 98 100 -1  EDGE 98 116 3  EDGE 116 101 -1  EDGE 116 125 -1 
+protocols.loops.loops_main: Added cutpoint variant to residue 31
+protocols.loops.loops_main: Added cutpoint variant to residue 32
+protocols.loops.loops_main: Added cutpoint variant to residue 58
+protocols.loops.loops_main: Added cutpoint variant to residue 59
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 6351 rotamers at 82 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.loops.loops_main: Added cutpoint variant to residue 31
+protocols.loops.loops_main: Added cutpoint variant to residue 32
+protocols.loops.loops_main: Added cutpoint variant to residue 58
+protocols.loops.loops_main: Added cutpoint variant to residue 59
+protocols.loops.loops_main: Added cutpoint variant to residue 100
+protocols.loops.loops_main: Added cutpoint variant to residue 101
+basic.io.database: Database file opened: sampling/antibodies/cluster_center_dihedrals.txt
+protocols.antibody.AntibodyNumberingParser: Antibody numbering scheme definitions read successfully
+protocols.antibody.AntibodyNumberingParser: Antibody CDR definition read successfully
+antibody.AntibodyInfo: Successfully finished the CDR definition
+antibody.AntibodyInfo:  Could not setup Vl Vh Packing angle for camelid antibody
+antibody.AntibodyInfo: AC Detecting Camelid CDR H3 Stem Type
+antibody.AntibodyInfo: AC Finished Detecting Camelid CDR H3 Stem Type: NEUTRAL
+antibody.AntibodyInfo: Setting up CDR Cluster for H1
+protocols.antibody.cluster.CDRClusterMatcher: Length: 13 Omega: TTTTTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H2
+protocols.antibody.cluster.CDRClusterMatcher: Length: 10 Omega: TTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H3
+protocols.antibody.cluster.CDRClusterMatcher: Length: 19 Omega: TTTTTTTTTTTTTTTTTTT
+protocols.antibody.AntibodyModelerProtocol:  		atom_pair_constraint_score = 0
+protocols.antibody.AntibodyModelerProtocol:       dihedral_constraint_score = 0
+protocols.antibody.AntibodyModelerProtocol:          angle_constraint_score = 0.027789
+protocols.antibody.AntibodyModelerProtocol:                     total_score = -313.095
+protocols.antibody.AntibodyModelerProtocol:             unconstrained_score = -313.123
+antibody.metrics: Could not obtain Vl Vh coords as antibody is a camelid antibody.  Setting coords to zero
+antibody.metrics: Could not obtain Vl Vh coords as antibody is a camelid antibody.  Setting coords to zero
+antibody.metrics: Could not obtain Vl Vh coords as antibody is a camelid antibody.  Setting coords to zero
+antibody.metrics: Could not obtain Vl Vh coords as antibody is a camelid antibody.  Setting coords to zero
+antibody.metrics: H3_DN   (114): ASP -      -12.00633410788245       6.660651734860669      -60.27052933206900
+antibody.metrics: H3_RO   (98): ARG -      -11.18341526881277       6.440790618321070      -57.59868673535303
+antibody.metrics: H3_W/KB4 (116): TRP -      -11.35037225434551       2.382490170076490      -62.54116858439177
+antibody.metrics: H3_KB1   (113): MET -      -13.39610459396470       5.984928600964136      -61.90588662784786
+antibody.metrics: Total SASA is: 6586.65
+antibody.metrics: Total hydrophobic SASA is: 3162.64
+antibody.metrics: Total polar SASA is: 3424.01
+antibody.metrics: Loop H1: CDR  sasa 392.009	CDR hydrophobic sasa: 182.087	CDR polar sasa:  209.922
+antibody.metrics: Loop H2: CDR  sasa 1044.37	CDR hydrophobic sasa: 416.659	CDR polar sasa:  627.71
+antibody.metrics: Loop H3: CDR  sasa 1180.73	CDR hydrophobic sasa: 719.891	CDR polar sasa:  460.836
+antibody.metrics: Paratope_sasa 2617.11
+antibody.metrics: Paratope hydrophobic sasa 1318.64
+antibody.metrics: Paratope polar sasa 1298.47
+antibody.metrics: Loop H1:  -1 anions,   0 cations =  -1 total charge
+antibody.metrics: Loop H2:  -1 anions,   1 cations =   0 total charge
+antibody.metrics: Loop H3:  -2 anions,   0 cations =  -2 total charge
+protocols.antibody.AntibodyModelerProtocol: Antibody Modeling Protocol Finished!!!!
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.antibody.AntibodyModelerProtocol: 
+protocols.jd2.JobDistributor: model-0.relaxed_0001 reported success in 2031 seconds
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 1 jobs considered, 1 jobs attempted in 2031 seconds
+protocols.jd2.JobDistributor: [ WARNING ] The following options have been set, but have not yet been used:
+	-out:levels protocols.simple_moves.ConstraintSetMover:debug
+

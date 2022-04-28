@@ -1,0 +1,69 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module TMalign ! in 
+    interface  ! in :TMalign
+        subroutine tmalign ! in :TMalign:TMalign_compares.f
+            integer dimension(3000) :: invmap_i
+            real :: d8
+            real :: d00
+            real :: d002
+            real dimension(3,3000,2) :: xa
+            real :: d0_min
+            character*100 :: pdb1
+            character*100 :: pdb2
+            character*100 :: outname
+            integer :: nseq1
+            integer :: nseq2
+            real :: tm
+            real :: tmmax
+            real dimension(3000,3000) :: score
+            real :: gap_open
+            integer dimension(3000) :: invmap
+            real :: rmsd8_al
+            real :: tm8
+            real :: seq_id
+            character dimension(6000) :: aseq1
+            character dimension(6000) :: aseq2
+            character dimension(6000) :: aseq3
+            integer :: n8_al
+            integer dimension(3000) :: invmap0
+            integer optional :: m_out=-1
+            integer optional :: m_fix=-1
+            integer optional :: m_ave=-1
+            integer optional :: m_d0_min=-1
+            integer optional :: m_d0=-1
+            integer :: l_fix
+            real :: d0_min_input
+            real :: d0_fix
+            character dimension(3000,3),intent(c) :: ss1
+            character dimension(3000,3),intent(c) :: ss2
+            integer dimension(3000) :: mm1
+            integer dimension(3000) :: mm2
+            character dimension(3001) :: seq1
+            character dimension(3001) :: seq2
+            real :: d0
+            real :: anseq
+            integer dimension(3000) :: n1
+            integer dimension(3000) :: n2
+            common /init/ invmap_i
+            common /d8/ d8
+            common /d00/ d00,d002
+            common /backbone/ xa
+            common /d0min/ d0_min
+            common /filenames/ pdb1,pdb2,outname
+            common /length/ nseq1,nseq2
+            common /tm/ tm,tmmax
+            common /dpc/ score,gap_open,invmap
+            common /result/ rmsd8_al,tm8,seq_id,aseq1,aseq2,aseq3,n8_al
+            common /alignrst/ invmap0
+            common /options/ m_out,m_fix,m_ave,m_d0_min,m_d0,l_fix,d0_min_input,d0_fix
+            common /pdb/ ss1,ss2,mm1,mm2,seq1,seq2
+            common /d0/ d0,anseq
+            common /n1n2/ n1,n2
+        end subroutine tmalign
+    end interface 
+end python module TMalign
+
+! This file was auto-generated with f2py (version:2_2522).
+! See http://cens.ioc.ee/projects/f2py2e/

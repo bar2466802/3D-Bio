@@ -1,0 +1,1 @@
+antibody_H3.linuxgccrelease @abH3.flags -s model-0.relaxed.pdb -nstruct 1 -out:file:scorefile H3_neural_modeling_scores.fasc -out:path:pdb H3_neural_modeling -constraints:cst_file constraints_file -constraints:cst_weight 1.0 > h3_neural_modeling-0.log

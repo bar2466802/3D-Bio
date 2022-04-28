@@ -1,0 +1,4 @@
+n,model's name without clustring,model's RMSD without clustring,model's name with clustring,model's RMSD with clustring
+1,model-0.relaxed_0031 ,4.016,model-0.relaxed_0031,4.016
+5,model-0.relaxed_0058,2.979,model-0.relaxed_0050,2.895
+10,model-0.relaxed_0004 ,2.046,model-0.relaxed_0097,1.876

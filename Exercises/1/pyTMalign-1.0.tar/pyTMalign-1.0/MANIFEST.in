@@ -1,0 +1,9 @@
+include README
+include INSTALL
+include COPYRIGHT
+include LICENSE
+include CHANGE
+include MANIFEST.in
+include scripts/*
+include src/*
+include sunjoong/*

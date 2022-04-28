@@ -1,0 +1,22 @@
+# BLASTP 2.8.1+
+# Query: grafting/h3.fasta
+# Database: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.H3.17
+# Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 16 hits found
+grafting/h3.fasta	4hk0	64.706	17	6	0	1	17	1	17	3.97e-06	27.8
+grafting/h3.fasta	4wuk	64.706	17	6	0	1	17	1	17	3.97e-06	27.8
+grafting/h3.fasta	5ugy	64.706	17	6	0	1	17	1	17	3.97e-06	27.8
+grafting/h3.fasta	4hkx	58.824	17	7	0	1	17	1	17	9.74e-06	26.5
+grafting/h3.fasta	5yoy	61.538	13	5	0	5	17	5	17	0.003	20.2
+grafting/h3.fasta	3x3g	100.000	7	0	0	11	17	11	17	0.027	17.2
+grafting/h3.fasta	3x3f	100.000	7	0	0	11	17	11	17	0.027	17.2
+grafting/h3.fasta	4xwg	87.500	8	1	0	10	17	10	17	0.046	16.8
+grafting/h3.fasta	1f58	46.154	13	7	0	5	17	5	17	0.20	15.1
+grafting/h3.fasta	2f58	46.154	13	7	0	5	17	5	17	0.20	15.1
+grafting/h3.fasta	3f58	46.154	13	7	0	5	17	5	17	0.20	15.1
+grafting/h3.fasta	3fn0	77.778	9	1	1	9	17	10	17	0.48	13.8
+grafting/h3.fasta	3q1s	77.778	9	1	1	9	17	10	17	0.48	13.8
+grafting/h3.fasta	6iuv	100.000	4	0	0	11	14	4	7	5.6	10.8
+grafting/h3.fasta	3nps	66.667	6	2	0	11	16	11	16	13	10.0
+grafting/h3.fasta	5bk2	100.000	3	0	0	14	16	14	16	18	 9.5
+# BLAST processed 1 queries

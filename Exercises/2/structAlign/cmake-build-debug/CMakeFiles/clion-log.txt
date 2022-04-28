@@ -1,0 +1,4 @@
+C:\Users\BarM\.CLion2019.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug

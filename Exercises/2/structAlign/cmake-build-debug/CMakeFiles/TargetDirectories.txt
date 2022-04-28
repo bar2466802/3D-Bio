@@ -1,0 +1,3 @@
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug/CMakeFiles/Code.dir
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/cmake-build-debug/CMakeFiles/edit_cache.dir

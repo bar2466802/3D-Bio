@@ -1,0 +1,64 @@
+Template №0
+	h1
+		pdb: 4ffv
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	h2
+		pdb: 6h0e
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	h3
+		pdb: 4wuk
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	l1
+		pdb: 6nb8
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	l2
+		pdb: 3bkj
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	l3
+		pdb: 1qfu
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	frh
+		pdb: 6db6
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	frl
+		pdb: 1mju
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+
+	orientation
+		pdb: 4hcr
+		padded: 0
+		structure source: 
+		light type iso-type: 
+		bio type: 
+

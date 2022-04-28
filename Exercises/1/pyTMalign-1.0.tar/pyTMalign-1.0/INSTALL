@@ -1,0 +1,29 @@
+o Prerequisites:
+
+  Python   version 2.3   or later,  http://www.python.org/
+  Sunjoong version 0.1   or later,  http://sunjoong.sourceforge.net/
+  NumPy    version 0.9.8 or later,  http://numeric.scipy.org/
+  F2PY     version 2.39  or later,  http://cens.ioc.ee/projects/f2py2e/
+  Gcc      version 3.3   or later,  http://gcc.gnu.org/
+  G77      version 3.3   or later,  http://gcc.gnu.org/
+
+
+o Installation process example1:
+  This process will make files and directories under /usr directory.
+  You need superuser privilege.
+
+$ python setup.py build
+$ python setup.py install
+
+
+o Another installation example2:
+  This process will make files and directories under your home directory.
+  You should set PATH and PYTHONPATH environment variables to
+  "${HOME}/bin" and "${HOME}/lib/python"
+
+$ python setup.py build
+$ python setup.py install --home $HOME
+
+
+2006.07.04    Sunjoong LEE <sunjoong@gmail.com>
+

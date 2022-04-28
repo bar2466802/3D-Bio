@@ -1,0 +1,24 @@
+CC=g++
+CXXFLAGS= -Wall -Wvla -Wextra -Werror -g -std=c++17
+LDFLAGS= -lm
+HEADERS= Vector3.h Atom.h Rotation3.h Matrix3.h RigidTrans3.h Triangle.h PDB.h Match.h numerics.h
+OBJS= Vector3.o Atom.o Rotation3.o Matrix3.o RigidTrans3.o Triangle.o PDB.o Match.o numerics.o structAlign.o
+
+%.o : %.c
+
+
+structalign: $(OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+$(OBJS) : $(HEADERS)
+
+.PHONY: clean
+clean:
+	rm -rf *.o
+	rm -rf mlpnetwork
+tar:
+	tar cvf ex2.tar structAlign.cc Results for given pairs.pdf
+
+
+
+

@@ -1,0 +1,1632 @@
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.source.release-274 r274 2020.50+release.1295438 1295438cd4bd2be39c9dbbfab8db669ab62415ab https://www.rosettacommons.org 2020-12-13T21:33:15.479874
+core.init: command: antibody.linuxgccrelease -n_multi_templates 1 -vhh_only -fasta 6dlb.fa -exclude_homologs true
+basic.random.init_random_generator: 'RNG device' seed mode, using '/dev/urandom', seed=597665250 seed_offset=0 real_seed=597665250
+basic.random.init_random_generator: RandomGenerator:init: Normal mode, seed=597665250 RG_type=mt19937
+core.init: found database environment variable ROSETTA3_DB: /cs/labs/dina/tomer.cohen13/Rosetta/main/database
+antibody: Using antibody grafting_database at: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody/
+antibody: Unzipping files in antibody_database (if any). This will only be done once.
+antibody: Done unzipping.
+antibody: Heavy chain fasta input file: 6dlb.fa
+antibody: Light chain fasta input file: 
+antibody: Running with option "-vhh_only"! Using a dummy light chain!
+antibody: Antibody grafting protocol Running with input:
+antibody: Heavy chain sequence: QVQLVQSGAEVKKPGASVKVSCKASGYTFTDYHINWVRQAPGQGLEWMGWIHPNSGDTNYAQKFQGWVTMTRDTAISTAYMEVNGLKSDDTAVYYCARAGLHPTTTEYYYYGMDVWGQGTTVTVS
+antibody: Light chain sequence: DVVMTQTPLSLPVSLGNQASISCRSSQSLVHSNGNTYLHWYLQKPGQSPKLLIYKVSNRFSGVPDRFSGSGSGTDFTLKISRVEAEDLGVYFCSQSTHVPFTFGSGTKLEIKR
+protocols.antibody.grafting: Path to REGEX file is: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/protocol_data/antibody/cdr_regex.txt
+protocols.antibody.grafting: The detected H1 REGEX is: C[A-Z]{1,16}(W)(I|V|F|Y|A|M|L|N|G)(R|K|Q|V|N|C|G)(Q|K|H|E|L|R)
+protocols.antibody.grafting: The detected H3 REGEX is: (C[A-Z]{1,33}(W)(G|A|C)[A-Z]{1,2}(Q|S|G|R))|(CARAVVFSKYFDYWSQG)|(SRISYAVWNTIPYNKLTL)
+protocols.antibody.grafting: The detected L1 REGEX is: C[A-Z]{1,17}(WYL|WLQ|WFQ|WYQ|WYH|WVQ|WVR|WWQ|WVK|WYR|WLL|WFL|WVF|WIQ|WYR|WNQ|WHL|WHQ|WYM|WYY)
+protocols.antibody.grafting: The detected L3 REGEX is: C[A-Z]{1,15}(L|F|V|S)G[A-Z](G|Y)
+protocols.antibody.grafting: H1 detected: GYTFTDYHIN (10 residues at positions: 25 to 35)
+protocols.antibody.grafting: H3 detected: AGLHPTTTEYYYYGMDV (17 residues at positions: 98 to 115)
+protocols.antibody.grafting: H2 detected: WIHPNSGDTNYAQKFQG (17 residues at positions: 49 to 66)
+protocols.antibody.grafting: L1 detected: RSSQSLVHSNGNTYLH (16 residues at positions: 23 to 39)
+protocols.antibody.grafting: L3 detected: SQSTHVPFT (9 residues at positions: 93 to 102)
+protocols.antibody.grafting: L2 detected: KVSNRFS (7 residues at positions: 54 to 61)
+
+HeavyAntibodyFramework{fr1[0:25, length=25, QVQLVQSGAEVKKPGASVKVSCKAS], fr2[35:49, length=14, WVRQAPGQGLEWMG], fr3[66:98, length=32, WVTMTRDTAISTAYMEVNGLKSDDTAVYYCAR], fr4[115:125, length=10, WGQGTTVTVS]}
+LightAntibodyFramework{fr1[0:23, length=23, DVVMTQTPLSLPVSLGNQASISC], fr2[39:54, length=15, WYLQKPGQSPKLLIY], fr3[61:93, length=32, GVPDRFSGSGSGTDFTLKISRVEAEDLGVYFC], fr4[102:113, length=11, FGSGTKLEIKR]}
+
+protocols.antibody.grafting: Setting antibody grafting database path from command line-options to: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody/
+protocols.antibody.grafting: Setting output prefix from command line-options to: grafting/
+protocols.antibody.grafting: Setting path to NCBI-Blast+ executable from command line-options to: blastp
+protocols.antibody.grafting.util: Reading file: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//info/antibody.info
+basic.execute: Running blast+ for frh... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.FRH, -query, grafting/frh.fasta, -out, grafting/frh.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 0.00001, -matrix, BLOSUM62]
+protocols.antibody.grafting.util: Reading file: grafting/frh.align
+basic.execute: Running blast+ for h1... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.H1.10, -query, grafting/h1.fasta, -out, grafting/h1.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/h1.align
+basic.execute: Running blast+ for h2... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.H2.17, -query, grafting/h2.fasta, -out, grafting/h2.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/h2.align
+basic.execute: Running blast+ for h3... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.H3.17, -query, grafting/h3.fasta, -out, grafting/h3.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/h3.align
+basic.execute: Running blast+ for frl... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.FRL, -query, grafting/frl.fasta, -out, grafting/frl.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 0.00001, -matrix, BLOSUM62]
+protocols.antibody.grafting.util: Reading file: grafting/frl.align
+basic.execute: Running blast+ for l1... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.L1.16, -query, grafting/l1.fasta, -out, grafting/l1.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/l1.align
+basic.execute: Running blast+ for l2... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.L2.7, -query, grafting/l2.fasta, -out, grafting/l2.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/l2.align
+basic.execute: Running blast+ for l3... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.L3.9, -query, grafting/l3.fasta, -out, grafting/l3.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 2000, -matrix, PAM30]
+protocols.antibody.grafting.util: Reading file: grafting/l3.align
+basic.execute: Running blast+ for orientation... blastp [-db, /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//blast_database/database.light_heavy, -query, grafting/orientation.fasta, -out, grafting/orientation.align, -word_size, 2, -outfmt, 7, -max_target_seqs, 1024, -evalue, 0.00001, -matrix, BLOSUM62]
+protocols.antibody.grafting.util: Reading file: grafting/orientation.align
+protocols.antibody.grafting.util: Reading file: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody/info/bfactors.info
+protocols.antibody.grafting.util: Reading file: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody/info/orientations.txt
+protocols.antibody.grafting.util: Reading file: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody/outlier_list
+protocols.antibody.grafting: SCS_Base::select: Final results count: h1:681  h2:362  h3:7    l1:168  l2:13   l3:114  frh:848  frl:708  orientation:941 
+antibody: SCS frh best template: 6db6
+antibody: SCS frl best template: 1mju
+antibody: SCS Orientation best template: 4hcr
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 985 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.851557 seconds.
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/6db6_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 122
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue GLN:CtermProteinFull 231
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 143 208
+core.conformation.Conformation: current variant for 143 CYS
+core.conformation.Conformation: current variant for 208 CYS
+core.conformation.Conformation: current variant for 143 CYD
+core.conformation.Conformation: current variant for 208 CYD
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/1mju_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 114
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 228
+core.conformation.Conformation: Found disulfide between residues 21 95
+core.conformation.Conformation: current variant for 21 CYS
+core.conformation.Conformation: current variant for 95 CYS
+core.conformation.Conformation: current variant for 21 CYD
+core.conformation.Conformation: current variant for 95 CYD
+core.conformation.Conformation: Found disulfide between residues 137 207
+core.conformation.Conformation: current variant for 137 CYS
+core.conformation.Conformation: current variant for 207 CYS
+core.conformation.Conformation: current variant for 137 CYD
+core.conformation.Conformation: current variant for 207 CYD
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/4hcr_trunc.pdb' automatically determined to be of type PDB
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 3 atoms at position 1 in file /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/4hcr_trunc.pdb. Best match rsd_type:  GLN:NtermProteinFull
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 3 atoms at position 124 in file /cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/4hcr_trunc.pdb. Best match rsd_type:  ASP:NtermProteinFull
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 123
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue THR:CtermProteinFull 237
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 146 216
+core.conformation.Conformation: current variant for 146 CYS
+core.conformation.Conformation: current variant for 216 CYS
+core.conformation.Conformation: current variant for 146 CYD
+core.conformation.Conformation: current variant for 216 CYD
+protocols.antibody.grafting: Adjusting frh template sequence [/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/6db6_trunc.pdb]...
+protocols.antibody.grafting: By using numbering: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 52A 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 82A 82B 82C 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 100A 100B 100C 100D 100E 100F 100G 100H 100I 101 102 103 104 105 106 107 108 109 110 111 112
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+protocols.antibody.grafting: Sequence before: QVQLVQSGAEVKKPGASVKISCKASGYNFTTYAMHWVRQAPGQGLEWMGWINGGNGDTRYSQKFRGRVTISRDTSASTAYMELHSLTSEDTALFYCARESGDYYSEISGALDWGQGTLVTVS
+protocols.simple_moves.MutateResidue: Breaking disulfide bond between CYS96 and CYS22.
+core.conformation.Residue: [ WARNING ] Residue connection id changed when creating a new residue at seqpos 1
+core.conformation.Residue: [ WARNING ] ResConnID info stored on the connected residue (residue 2) is now out of date!
+core.conformation.Residue: [ WARNING ] Connection atom name (in src):  C  
+core.chemical.AtomICoor: [ WARNING ] IcoorAtomID::atom_id(): Cannot get atom_id for POLYMER_LOWER of residue GLN 1.  Returning BOGUS ID instead.
+core.conformation.Residue: [ WARNING ] missing an atom: 1  H   that depends on a nonexistent polymer connection! 
+core.conformation.Residue: [ WARNING ]  --> generating it using idealized coordinates.
+protocols.antibody.grafting: [ WARNING ] Was not able to adjust all residue in chain: H!!!
+protocols.antibody.grafting: [ WARNING ] Leftovers numbering: [100G, 100H, 100I, 112]  AA: YGMS
+protocols.antibody.grafting: [ WARNING ] Original numbering was: AntibodyChainNumbering {
+protocols.antibody.grafting: [ WARNING ]    fr1 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+protocols.antibody.grafting: [ WARNING ]   cdr1 : [26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+protocols.antibody.grafting: [ WARNING ]    fr2 : [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+protocols.antibody.grafting: [ WARNING ]   cdr2 : [50, 51, 52, 52A, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65]
+protocols.antibody.grafting: [ WARNING ]    fr3 : [66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 82A, 82B, 82C, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94]
+protocols.antibody.grafting: [ WARNING ]   cdr3 : [95, 96, 97, 98, 99, 100, 100A, 100B, 100C, 100D, 100E, 100F, 100G, 100H, 100I, 101, 102]
+protocols.antibody.grafting: [ WARNING ]    fr4 : [103, 104, 105, 106, 107, 108, 109, 110, 111, 112]
+protocols.antibody.grafting: [ WARNING ] }
+protocols.antibody.grafting: Sequence after:  QVQLVQSGAEVKKPGASVKVSCKASGYTFTDYHINWVRQAPGQGLEWMGWIHPNSGDTNYAQKFQGWVTMTRDTAISTAYMEVNGLKSDDTAVYYCARAGLHPTTTEYYYDVWGQGTTVTVS
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+protocols.antibody.grafting: Adjusting frl template sequence [/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/1mju_trunc.pdb]...
+protocols.antibody.grafting: By using numbering: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 30A 30B 30C 30D 30E 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108
+core.conformation.Conformation: Found disulfide between residues 23 93
+core.conformation.Conformation: current variant for 23 CYD
+core.conformation.Conformation: current variant for 93 CYD
+core.conformation.Conformation: current variant for 23 CYD
+core.conformation.Conformation: current variant for 93 CYD
+protocols.antibody.grafting: Sequence before: DIVMTQAAPSVPVTPGESVSISCRSSKSLLHSNGNTYLYWFLQRPGQSPQLLIYRMSNLASGVPDRFSGSGSGTAFTLRISRVEAEDVGVYYCLQHLEYPFTFGAGTKLELKRA
+protocols.simple_moves.MutateResidue: Breaking disulfide bond between CYS93 and CYS23.
+core.conformation.Residue: [ WARNING ] Residue connection id changed when creating a new residue at seqpos 1
+core.conformation.Residue: [ WARNING ] ResConnID info stored on the connected residue (residue 2) is now out of date!
+core.conformation.Residue: [ WARNING ] Connection atom name (in src):  C  
+core.chemical.AtomICoor: [ WARNING ] IcoorAtomID::atom_id(): Cannot get atom_id for POLYMER_LOWER of residue ASP 1.  Returning BOGUS ID instead.
+core.conformation.Residue: [ WARNING ] missing an atom: 1  H   that depends on a nonexistent polymer connection! 
+core.conformation.Residue: [ WARNING ]  --> generating it using idealized coordinates.
+protocols.antibody.grafting: Sequence after:  DVVMTQTPLSLPVSLGNQASISCRSSQSLVHSNGNTYLHWYLQKPGQSPKLLIYKVSNRFSGVPDRFSGSGSGTDFTLKISRVEAEDLGVYFCSQSTHVPFTFGSGTKLEIKRA
+core.conformation.Conformation: Found disulfide between residues 23 93
+core.conformation.Conformation: current variant for 23 CYD
+core.conformation.Conformation: current variant for 93 CYD
+core.conformation.Conformation: current variant for 23 CYD
+core.conformation.Conformation: current variant for 93 CYD
+protocols.antibody.grafting: Attaching CDR loop: h1, from pdb: 4ffv
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/4ffv_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 116
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 224
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 139 203
+core.conformation.Conformation: current variant for 139 CYS
+core.conformation.Conformation: current variant for 203 CYS
+core.conformation.Conformation: current variant for 139 CYD
+core.conformation.Conformation: current variant for 203 CYD
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 25 End: 36 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 10 residues from 26 to 35
+core.conformation.Conformation: Found disulfide between residues 22 86
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 86 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 86 CYD
+core.conformation.Conformation: Found disulfide between residues 135 205
+core.conformation.Conformation: current variant for 135 CYS
+core.conformation.Conformation: current variant for 205 CYS
+core.conformation.Conformation: current variant for 135 CYD
+core.conformation.Conformation: current variant for 205 CYD
+protocols.grafting.util: insert_point 25
+protocols.grafting.util: insert_start 26
+protocols.grafting.util: insert_end 35
+protocols.grafting.util: insert_length 10
+protocols.grafting.util: FOLD_TREE  EDGE 1 25 -1  EDGE 25 26 1  EDGE 26 226 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 25
+protocols.grafting.CCDEndsGraftMover: Original End: 36
+protocols.grafting.CCDEndsGraftMover: End: 36
+protocols.grafting.CCDEndsGraftMover: Insert Length: 10
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_smooth_params.txt
+core.scoring.ramachandran: shapovalov_lib::shap_rama_smooth_level of 4( aka highest_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/rama/shapovalov/kappa25/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+protocols.grafting.CCDEndsGraftMover: LOOP start: 24  stop: 27  cut: 25  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 34  stop: 37  cut: 35  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 25 -1  EDGE 25 36 1  EDGE 36 236 -1  EDGE 25 26 -2  C    N    EDGE 26 27 -2  C    N    EDGE 27 28 -2  C    N    EDGE 28 29 -2  C    N    EDGE 29 30 -2  C    N    EDGE 30 31 -2  C    N    EDGE 31 32 -2  C    N    EDGE 32 33 -2  C    N    EDGE 33 34 -2  C    N    EDGE 34 35 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 23 -1  EDGE 23 25 -1  EDGE 23 28 1  EDGE 28 26 -1  EDGE 28 33 -1  EDGE 33 35 -1  EDGE 33 38 2  EDGE 38 36 -1  EDGE 38 236 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 25
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 35
+protocols.grafting.util: idealized  24
+protocols.grafting.util: idealized  25
+protocols.grafting.util: ideal 26
+protocols.grafting.util: ideal 35
+protocols.grafting.util: idealized 36
+protocols.grafting.util: idealized 37
+core.chemical.GlobalResidueTypeSet: Finished initializing centroid residue type set.  Created 69 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.03955 seconds.
+basic.io.database: Database file opened: scoring/score_functions/disulfides/centroid_distance_score
+basic.io.database: Database file opened: scoring/score_functions/disulfides/centroid_CaCbCb_angle_score
+basic.io.database: Database file opened: scoring/score_functions/disulfides/centroid_CaCbCbCa_dihedral_score
+basic.io.database: Database file opened: scoring/score_functions/disulfides/centroid_backbone_dihedral_score
+protocols.grafting.CCDEndsGraftMover: start 578.933
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 204.234
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 186.797
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: 3 180.951
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: 4 180.859
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: 5 178.226
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: 11 179.632
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: 12 178.036
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: 13 177.129
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: 18 175.921
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: 21 174.98
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: 25 173.474
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: 26 174.084
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: round 29
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: 31 174.098
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: 32 174.035
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: 35 177.584
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: 36 177.133
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: 37 177.263
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: 39 173.865
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: 41 173.12
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: 53 173.365
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: 56 174.333
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: 70 174.202
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: 73 174.268
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: 80 173.935
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: 86 174.11
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: 91 176.037
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: 94 175.466
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: 96 173.141
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: 105 173.314
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: 109 172.41
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: 118 173.615
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: 120 172.639
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: finish 172.41
+core.pack.task: Packer task: initialize from command line() 
+basic.io.database: Database file opened: scoring/score_functions/elec_cp_reps.dat
+core.scoring.elec.util: Read 40 countpair representative atoms
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.119117 seconds to load from binary
+core.pack.pack_rotamers: built 127 rotamers at 15 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+protocols.antibody.grafting: Attaching CDR loop: h2, from pdb: 6h0e
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/6h0e_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 119
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue THR:CtermProteinFull 233
+core.conformation.Conformation: Found disulfide between residues 21 95
+core.conformation.Conformation: current variant for 21 CYS
+core.conformation.Conformation: current variant for 95 CYS
+core.conformation.Conformation: current variant for 21 CYD
+core.conformation.Conformation: current variant for 95 CYD
+core.conformation.Conformation: Found disulfide between residues 100 105
+core.conformation.Conformation: current variant for 100 CYS
+core.conformation.Conformation: current variant for 105 CYS
+core.conformation.Conformation: current variant for 100 CYD
+core.conformation.Conformation: current variant for 105 CYD
+core.conformation.Conformation: Found disulfide between residues 142 212
+core.conformation.Conformation: current variant for 142 CYS
+core.conformation.Conformation: current variant for 212 CYS
+core.conformation.Conformation: current variant for 142 CYD
+core.conformation.Conformation: current variant for 212 CYD
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 49 End: 67 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 17 residues from 50 to 66
+core.conformation.Conformation: Found disulfide between residues 22 79
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 79 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 79 CYD
+core.conformation.Conformation: Found disulfide between residues 128 198
+core.conformation.Conformation: current variant for 128 CYD
+core.conformation.Conformation: current variant for 198 CYD
+core.conformation.Conformation: current variant for 128 CYD
+core.conformation.Conformation: current variant for 198 CYD
+protocols.grafting.util: insert_point 49
+protocols.grafting.util: insert_start 50
+protocols.grafting.util: insert_end 66
+protocols.grafting.util: insert_length 17
+protocols.grafting.util: FOLD_TREE  EDGE 1 49 -1  EDGE 49 50 1  EDGE 50 219 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 49
+protocols.grafting.CCDEndsGraftMover: Original End: 67
+protocols.grafting.CCDEndsGraftMover: End: 67
+protocols.grafting.CCDEndsGraftMover: Insert Length: 17
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.grafting.CCDEndsGraftMover: LOOP start: 48  stop: 51  cut: 49  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 65  stop: 68  cut: 66  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 49 -1  EDGE 49 67 1  EDGE 67 236 -1  EDGE 49 50 -2  C    N    EDGE 50 51 -2  C    N    EDGE 51 52 -2  C    N    EDGE 52 53 -2  C    N    EDGE 53 54 -2  C    N    EDGE 54 55 -2  C    N    EDGE 55 56 -2  C    N    EDGE 56 57 -2  C    N    EDGE 57 58 -2  C    N    EDGE 58 59 -2  C    N    EDGE 59 60 -2  C    N    EDGE 60 61 -2  C    N    EDGE 61 62 -2  C    N    EDGE 62 63 -2  C    N    EDGE 63 64 -2  C    N    EDGE 64 65 -2  C    N    EDGE 65 66 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 47 -1  EDGE 47 49 -1  EDGE 47 52 1  EDGE 52 50 -1  EDGE 52 64 -1  EDGE 64 66 -1  EDGE 64 69 2  EDGE 69 67 -1  EDGE 69 236 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 49
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 66
+protocols.grafting.util: idealized  48
+protocols.grafting.util: idealized  49
+protocols.grafting.util: ideal 50
+protocols.grafting.util: ideal 66
+protocols.grafting.util: idealized 67
+protocols.grafting.util: idealized 68
+protocols.grafting.CCDEndsGraftMover: start 362.373
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 145.974
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 141.837
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: 3 137.709
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: 7 136.793
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: 8 137.871
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: 14 136.959
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: 22 137.142
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: round 29
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: 32 137.921
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: 35 137.446
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: 38 137.872
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: 40 135.922
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: 48 137.401
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: 57 136.244
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: 81 137.043
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: 84 137.579
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: 87 139.081
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: 88 138.1
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: 91 137.416
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: 94 136.979
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: 96 136.963
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: 100 137.889
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: 101 135.386
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: 114 136.486
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: 116 134.578
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: finish 134.578
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 174 rotamers at 23 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+protocols.antibody.grafting: Attaching CDR loop: h3, from pdb: 4wuk
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/4wuk_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 125
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue GLN:CtermProteinFull 234
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 146 211
+core.conformation.Conformation: current variant for 146 CYS
+core.conformation.Conformation: current variant for 211 CYS
+core.conformation.Conformation: current variant for 146 CYD
+core.conformation.Conformation: current variant for 211 CYD
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 98 End: 113 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 14 residues from 99 to 112
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 131 201
+core.conformation.Conformation: current variant for 131 CYD
+core.conformation.Conformation: current variant for 201 CYD
+core.conformation.Conformation: current variant for 131 CYD
+core.conformation.Conformation: current variant for 201 CYD
+protocols.grafting.util: insert_point 98
+protocols.grafting.util: insert_start 99
+protocols.grafting.util: insert_end 115
+protocols.grafting.util: insert_length 17
+protocols.grafting.util: FOLD_TREE  EDGE 1 98 -1  EDGE 98 99 1  EDGE 99 222 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 98
+protocols.grafting.CCDEndsGraftMover: Original End: 113
+protocols.grafting.CCDEndsGraftMover: End: 116
+protocols.grafting.CCDEndsGraftMover: Insert Length: 17
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.grafting.CCDEndsGraftMover: LOOP start: 97  stop: 100  cut: 98  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 114  stop: 117  cut: 115  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 98 -1  EDGE 98 116 1  EDGE 116 239 -1  EDGE 98 99 -2  C    N    EDGE 99 100 -2  C    N    EDGE 100 101 -2  C    N    EDGE 101 102 -2  C    N    EDGE 102 103 -2  C    N    EDGE 103 104 -2  C    N    EDGE 104 105 -2  C    N    EDGE 105 106 -2  C    N    EDGE 106 107 -2  C    N    EDGE 107 108 -2  C    N    EDGE 108 109 -2  C    N    EDGE 109 110 -2  C    N    EDGE 110 111 -2  C    N    EDGE 111 112 -2  C    N    EDGE 112 113 -2  C    N    EDGE 113 114 -2  C    N    EDGE 114 115 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 96 -1  EDGE 96 98 -1  EDGE 96 101 1  EDGE 101 99 -1  EDGE 101 113 -1  EDGE 113 115 -1  EDGE 113 118 2  EDGE 118 116 -1  EDGE 118 239 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 98
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 115
+protocols.grafting.util: idealized  97
+protocols.grafting.util: idealized  98
+protocols.grafting.util: ideal 99
+protocols.grafting.util: ideal 115
+protocols.grafting.util: idealized 116
+protocols.grafting.util: idealized 117
+protocols.grafting.CCDEndsGraftMover: start 466.952
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 213.404
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 175.707
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: 3 173.125
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: 4 172.435
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: 6 166.948
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: 12 167.398
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: 13 167.437
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: 15 168.488
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: 16 167.338
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: 17 167.939
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: 19 170.941
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: 21 168.941
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: 24 167.25
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: 26 169.356
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: 27 170.231
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: 28 168.886
+protocols.grafting.CCDEndsGraftMover: round 29
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: 30 168.074
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: 32 166.412
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: 41 165.741
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: 59 166.306
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: 60 166.479
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: 61 168.237
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: 65 168.312
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: 66 170.689
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: 67 167.218
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: 76 168.479
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: 80 168.468
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: 81 166.126
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: 86 165.153
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: 89 167.917
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: 96 168.835
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: 97 167.788
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: 101 165.833
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: 121 166.787
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: 124 166.563
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: 128 166.554
+protocols.grafting.CCDEndsGraftMover: finish 165.153
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 212 rotamers at 23 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+protocols.antibody.grafting: Attaching CDR loop: l1, from pdb: 6nb8
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/6nb8_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 126
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue THR:CtermProteinFull 240
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 149 219
+core.conformation.Conformation: current variant for 149 CYS
+core.conformation.Conformation: current variant for 219 CYS
+core.conformation.Conformation: current variant for 149 CYD
+core.conformation.Conformation: current variant for 219 CYD
+core.conformation.Conformation: Reverting out-of-date disulfide to thiol type at resid 2
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 148 End: 165 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 16 residues from 149 to 164
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 148 202
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 202 CYD
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 202 CYD
+protocols.grafting.util: insert_point 148
+protocols.grafting.util: insert_start 149
+protocols.grafting.util: insert_end 164
+protocols.grafting.util: insert_length 16
+protocols.grafting.util: FOLD_TREE  EDGE 1 148 -1  EDGE 148 149 1  EDGE 149 223 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 148
+protocols.grafting.CCDEndsGraftMover: Original End: 165
+protocols.grafting.CCDEndsGraftMover: End: 165
+protocols.grafting.CCDEndsGraftMover: Insert Length: 16
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.grafting.CCDEndsGraftMover: LOOP start: 147  stop: 150  cut: 148  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 163  stop: 166  cut: 164  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 148 -1  EDGE 148 165 1  EDGE 165 239 -1  EDGE 148 149 -2  C    N    EDGE 149 150 -2  C    N    EDGE 150 151 -2  C    N    EDGE 151 152 -2  C    N    EDGE 152 153 -2  C    N    EDGE 153 154 -2  C    N    EDGE 154 155 -2  C    N    EDGE 155 156 -2  C    N    EDGE 156 157 -2  C    N    EDGE 157 158 -2  C    N    EDGE 158 159 -2  C    N    EDGE 159 160 -2  C    N    EDGE 160 161 -2  C    N    EDGE 161 162 -2  C    N    EDGE 162 163 -2  C    N    EDGE 163 164 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 146 -1  EDGE 146 148 -1  EDGE 146 151 1  EDGE 151 149 -1  EDGE 151 162 -1  EDGE 162 164 -1  EDGE 162 167 2  EDGE 167 165 -1  EDGE 167 239 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 148
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 164
+protocols.grafting.util: idealized  147
+protocols.grafting.util: idealized  148
+protocols.grafting.util: ideal 149
+protocols.grafting.util: ideal 164
+protocols.grafting.util: idealized 165
+protocols.grafting.util: idealized 166
+protocols.grafting.CCDEndsGraftMover: start 483.631
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 130.143
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 125.542
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: 5 118.464
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: 14 121.141
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: 15 120.304
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: 17 119.24
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: 20 119.214
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: round 29
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: 37 117.738
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: 66 117.481
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: 74 116.875
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: 79 119.622
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: 80 118.352
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: 93 117.822
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: 99 116.419
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: 112 117.001
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: 125 120.25
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: finish 116.419
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 436 rotamers at 26 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+protocols.antibody.grafting: Attaching CDR loop: l2, from pdb: 3bkj
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/3bkj_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 123
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 237
+core.conformation.Conformation: Found disulfide between residues 21 96
+core.conformation.Conformation: current variant for 21 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 21 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 146 216
+core.conformation.Conformation: current variant for 146 CYS
+core.conformation.Conformation: current variant for 216 CYS
+core.conformation.Conformation: current variant for 146 CYD
+core.conformation.Conformation: current variant for 216 CYD
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 179 End: 187 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 7 residues from 180 to 186
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 148 211
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 211 CYD
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 211 CYD
+protocols.grafting.util: insert_point 179
+protocols.grafting.util: insert_start 180
+protocols.grafting.util: insert_end 186
+protocols.grafting.util: insert_length 7
+protocols.grafting.util: FOLD_TREE  EDGE 1 179 -1  EDGE 179 180 1  EDGE 180 232 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 179
+protocols.grafting.CCDEndsGraftMover: Original End: 187
+protocols.grafting.CCDEndsGraftMover: End: 187
+protocols.grafting.CCDEndsGraftMover: Insert Length: 7
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.grafting.CCDEndsGraftMover: LOOP start: 178  stop: 181  cut: 179  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 185  stop: 188  cut: 186  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 179 -1  EDGE 179 187 1  EDGE 187 239 -1  EDGE 179 180 -2  C    N    EDGE 180 181 -2  C    N    EDGE 181 182 -2  C    N    EDGE 182 183 -2  C    N    EDGE 183 184 -2  C    N    EDGE 184 185 -2  C    N    EDGE 185 186 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 177 -1  EDGE 177 179 -1  EDGE 177 182 1  EDGE 182 180 -1  EDGE 182 184 -1  EDGE 184 186 -1  EDGE 184 189 2  EDGE 189 187 -1  EDGE 189 239 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 179
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 186
+protocols.grafting.util: idealized  178
+protocols.grafting.util: idealized  179
+protocols.grafting.util: ideal 180
+protocols.grafting.util: ideal 186
+protocols.grafting.util: idealized 187
+protocols.grafting.util: idealized 188
+protocols.grafting.CCDEndsGraftMover: start 479.494
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 266.519
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 209.061
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: 3 151.493
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: 4 143.392
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: 5 139.651
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: 6 139.619
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: 7 137.396
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: 9 136.51
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: 10 132.469
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: 11 131.226
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: 12 129.74
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: 14 129.29
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: 16 131.466
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: 17 129.383
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: 19 130.007
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: 20 124.047
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: round 29
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: 49 125.467
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: 62 123.89
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: 79 125.339
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: 80 124.959
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: 100 124.835
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: finish 123.89
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 116 rotamers at 11 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+protocols.antibody.grafting: Attaching CDR loop: l3, from pdb: 1qfu
+core.import_pose.import_pose: File '/cs/labs/dina/tomer.cohen13/Rosetta/main/database/additional_protocol_data/antibody//antibody_database/1qfu_trunc.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue SER:CtermProteinFull 121
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 235
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYS
+core.conformation.Conformation: current variant for 96 CYS
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 144 214
+core.conformation.Conformation: current variant for 144 CYS
+core.conformation.Conformation: current variant for 214 CYS
+core.conformation.Conformation: current variant for 144 CYD
+core.conformation.Conformation: current variant for 214 CYD
+core.conformation.Conformation: Reverting out-of-date disulfide to thiol type at resid 2
+protocols.antibody.grafting: Grafting...
+protocols.grafting.CCDEndsGraftMover: Start: 218 End: 228 NterO: 2 CterO: 2
+protocols.grafting.util: Superimposing overhang residues
+protocols.grafting.util: Deleting 9 residues from 219 to 227
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: Found disulfide between residues 148 218
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 218 CYD
+core.conformation.Conformation: current variant for 148 CYD
+core.conformation.Conformation: current variant for 218 CYD
+protocols.grafting.util: insert_point 218
+protocols.grafting.util: insert_start 219
+protocols.grafting.util: insert_end 227
+protocols.grafting.util: insert_length 9
+protocols.grafting.util: FOLD_TREE  EDGE 1 218 -1  EDGE 218 219 1  EDGE 219 230 -1 
+protocols.grafting.GraftMoverBase: Insertion complete.
+protocols.grafting.AnchoredGraftMover: Setting default movemap
+protocols.grafting.CCDEndsGraftMover: Start: 218
+protocols.grafting.CCDEndsGraftMover: Original End: 228
+protocols.grafting.CCDEndsGraftMover: End: 228
+protocols.grafting.CCDEndsGraftMover: Insert Length: 9
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.grafting.CCDEndsGraftMover: LOOP start: 217  stop: 220  cut: 218  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.grafting.CCDEndsGraftMover: LOOP start: 226  stop: 229  cut: 227  size: 4  skip rate: 0  extended?: False
+protocols.grafting.CCDEndsGraftMover: 
+protocols.loops.FoldTreeFromLoopsWrapper: old foldtree FOLD_TREE  EDGE 1 218 -1  EDGE 218 228 1  EDGE 228 239 -1  EDGE 218 219 -2  C    N    EDGE 219 220 -2  C    N    EDGE 220 221 -2  C    N    EDGE 221 222 -2  C    N    EDGE 222 223 -2  C    N    EDGE 223 224 -2  C    N    EDGE 224 225 -2  C    N    EDGE 225 226 -2  C    N    EDGE 226 227 -2  C    N   
+New foldtree FOLD_TREE  EDGE 1 216 -1  EDGE 216 218 -1  EDGE 216 221 1  EDGE 221 219 -1  EDGE 221 225 -1  EDGE 225 227 -1  EDGE 225 230 2  EDGE 230 228 -1  EDGE 230 239 -1 
+protocols.grafting.util: Loop: 1
+protocols.grafting.util: Add variant to: 218
+protocols.grafting.util: Loop: 2
+protocols.grafting.util: Add variant to: 227
+protocols.grafting.util: idealized  217
+protocols.grafting.util: idealized  218
+protocols.grafting.util: ideal 219
+protocols.grafting.util: ideal 227
+protocols.grafting.util: idealized 228
+protocols.grafting.util: idealized 229
+protocols.grafting.CCDEndsGraftMover: start 430.746
+protocols.grafting.CCDEndsGraftMover: round 1
+protocols.grafting.CCDEndsGraftMover: 1 38.2905
+protocols.grafting.CCDEndsGraftMover: round 2
+protocols.grafting.CCDEndsGraftMover: 2 37.2497
+protocols.grafting.CCDEndsGraftMover: round 3
+protocols.grafting.CCDEndsGraftMover: round 4
+protocols.grafting.CCDEndsGraftMover: round 5
+protocols.grafting.CCDEndsGraftMover: round 6
+protocols.grafting.CCDEndsGraftMover: round 7
+protocols.grafting.CCDEndsGraftMover: 7 39.0279
+protocols.grafting.CCDEndsGraftMover: round 8
+protocols.grafting.CCDEndsGraftMover: 8 35.5031
+protocols.grafting.CCDEndsGraftMover: round 9
+protocols.grafting.CCDEndsGraftMover: round 10
+protocols.grafting.CCDEndsGraftMover: 10 34.4694
+protocols.grafting.CCDEndsGraftMover: round 11
+protocols.grafting.CCDEndsGraftMover: round 12
+protocols.grafting.CCDEndsGraftMover: 12 36.6494
+protocols.grafting.CCDEndsGraftMover: round 13
+protocols.grafting.CCDEndsGraftMover: round 14
+protocols.grafting.CCDEndsGraftMover: round 15
+protocols.grafting.CCDEndsGraftMover: round 16
+protocols.grafting.CCDEndsGraftMover: round 17
+protocols.grafting.CCDEndsGraftMover: round 18
+protocols.grafting.CCDEndsGraftMover: 18 37.9425
+protocols.grafting.CCDEndsGraftMover: round 19
+protocols.grafting.CCDEndsGraftMover: 19 36.4332
+protocols.grafting.CCDEndsGraftMover: round 20
+protocols.grafting.CCDEndsGraftMover: round 21
+protocols.grafting.CCDEndsGraftMover: round 22
+protocols.grafting.CCDEndsGraftMover: round 23
+protocols.grafting.CCDEndsGraftMover: round 24
+protocols.grafting.CCDEndsGraftMover: 24 35.6589
+protocols.grafting.CCDEndsGraftMover: round 25
+protocols.grafting.CCDEndsGraftMover: 25 34.6113
+protocols.grafting.CCDEndsGraftMover: round 26
+protocols.grafting.CCDEndsGraftMover: round 27
+protocols.grafting.CCDEndsGraftMover: 27 35.765
+protocols.grafting.CCDEndsGraftMover: round 28
+protocols.grafting.CCDEndsGraftMover: 28 34.9739
+protocols.grafting.CCDEndsGraftMover: round 29
+core.optimization.LineMinimizer: [ ERROR ] Inaccurate G! step= 3.8147e-08 Deriv= -1.54314 Finite Diff= -0.0741728
+protocols.grafting.CCDEndsGraftMover: round 30
+protocols.grafting.CCDEndsGraftMover: 30 34.4027
+protocols.grafting.CCDEndsGraftMover: round 31
+protocols.grafting.CCDEndsGraftMover: round 32
+protocols.grafting.CCDEndsGraftMover: round 33
+protocols.grafting.CCDEndsGraftMover: round 34
+protocols.grafting.CCDEndsGraftMover: round 35
+protocols.grafting.CCDEndsGraftMover: round 36
+protocols.grafting.CCDEndsGraftMover: round 37
+protocols.grafting.CCDEndsGraftMover: round 38
+protocols.grafting.CCDEndsGraftMover: round 39
+protocols.grafting.CCDEndsGraftMover: round 40
+protocols.grafting.CCDEndsGraftMover: 40 34.43
+protocols.grafting.CCDEndsGraftMover: round 41
+protocols.grafting.CCDEndsGraftMover: round 42
+protocols.grafting.CCDEndsGraftMover: round 43
+protocols.grafting.CCDEndsGraftMover: round 44
+protocols.grafting.CCDEndsGraftMover: round 45
+protocols.grafting.CCDEndsGraftMover: round 46
+protocols.grafting.CCDEndsGraftMover: round 47
+protocols.grafting.CCDEndsGraftMover: round 48
+protocols.grafting.CCDEndsGraftMover: round 49
+protocols.grafting.CCDEndsGraftMover: round 50
+protocols.grafting.CCDEndsGraftMover: round 51
+protocols.grafting.CCDEndsGraftMover: 51 35.2732
+protocols.grafting.CCDEndsGraftMover: round 52
+protocols.grafting.CCDEndsGraftMover: round 53
+protocols.grafting.CCDEndsGraftMover: round 54
+protocols.grafting.CCDEndsGraftMover: round 55
+protocols.grafting.CCDEndsGraftMover: round 56
+protocols.grafting.CCDEndsGraftMover: round 57
+protocols.grafting.CCDEndsGraftMover: 57 34.457
+protocols.grafting.CCDEndsGraftMover: round 58
+protocols.grafting.CCDEndsGraftMover: round 59
+protocols.grafting.CCDEndsGraftMover: round 60
+protocols.grafting.CCDEndsGraftMover: round 61
+protocols.grafting.CCDEndsGraftMover: 61 34.9689
+protocols.grafting.CCDEndsGraftMover: round 62
+protocols.grafting.CCDEndsGraftMover: round 63
+protocols.grafting.CCDEndsGraftMover: round 64
+protocols.grafting.CCDEndsGraftMover: 64 36.1447
+protocols.grafting.CCDEndsGraftMover: round 65
+protocols.grafting.CCDEndsGraftMover: round 66
+protocols.grafting.CCDEndsGraftMover: 66 34.9494
+protocols.grafting.CCDEndsGraftMover: round 67
+protocols.grafting.CCDEndsGraftMover: round 68
+protocols.grafting.CCDEndsGraftMover: round 69
+protocols.grafting.CCDEndsGraftMover: round 70
+protocols.grafting.CCDEndsGraftMover: round 71
+protocols.grafting.CCDEndsGraftMover: 71 34.646
+protocols.grafting.CCDEndsGraftMover: round 72
+protocols.grafting.CCDEndsGraftMover: round 73
+protocols.grafting.CCDEndsGraftMover: round 74
+protocols.grafting.CCDEndsGraftMover: round 75
+protocols.grafting.CCDEndsGraftMover: 75 33.1267
+protocols.grafting.CCDEndsGraftMover: round 76
+protocols.grafting.CCDEndsGraftMover: round 77
+protocols.grafting.CCDEndsGraftMover: round 78
+protocols.grafting.CCDEndsGraftMover: round 79
+protocols.grafting.CCDEndsGraftMover: round 80
+protocols.grafting.CCDEndsGraftMover: round 81
+protocols.grafting.CCDEndsGraftMover: round 82
+protocols.grafting.CCDEndsGraftMover: 82 33.6272
+protocols.grafting.CCDEndsGraftMover: round 83
+protocols.grafting.CCDEndsGraftMover: round 84
+protocols.grafting.CCDEndsGraftMover: round 85
+protocols.grafting.CCDEndsGraftMover: round 86
+protocols.grafting.CCDEndsGraftMover: round 87
+protocols.grafting.CCDEndsGraftMover: round 88
+protocols.grafting.CCDEndsGraftMover: round 89
+protocols.grafting.CCDEndsGraftMover: 89 33.0341
+protocols.grafting.CCDEndsGraftMover: round 90
+protocols.grafting.CCDEndsGraftMover: round 91
+protocols.grafting.CCDEndsGraftMover: round 92
+protocols.grafting.CCDEndsGraftMover: round 93
+protocols.grafting.CCDEndsGraftMover: round 94
+protocols.grafting.CCDEndsGraftMover: round 95
+protocols.grafting.CCDEndsGraftMover: round 96
+protocols.grafting.CCDEndsGraftMover: round 97
+protocols.grafting.CCDEndsGraftMover: round 98
+protocols.grafting.CCDEndsGraftMover: round 99
+protocols.grafting.CCDEndsGraftMover: round 100
+protocols.grafting.CCDEndsGraftMover: round 101
+protocols.grafting.CCDEndsGraftMover: round 102
+protocols.grafting.CCDEndsGraftMover: round 103
+protocols.grafting.CCDEndsGraftMover: 103 32.9984
+protocols.grafting.CCDEndsGraftMover: round 104
+protocols.grafting.CCDEndsGraftMover: round 105
+protocols.grafting.CCDEndsGraftMover: round 106
+protocols.grafting.CCDEndsGraftMover: round 107
+protocols.grafting.CCDEndsGraftMover: round 108
+protocols.grafting.CCDEndsGraftMover: round 109
+protocols.grafting.CCDEndsGraftMover: round 110
+protocols.grafting.CCDEndsGraftMover: round 111
+protocols.grafting.CCDEndsGraftMover: round 112
+protocols.grafting.CCDEndsGraftMover: round 113
+protocols.grafting.CCDEndsGraftMover: round 114
+protocols.grafting.CCDEndsGraftMover: round 115
+protocols.grafting.CCDEndsGraftMover: round 116
+protocols.grafting.CCDEndsGraftMover: 116 33.2299
+protocols.grafting.CCDEndsGraftMover: round 117
+protocols.grafting.CCDEndsGraftMover: round 118
+protocols.grafting.CCDEndsGraftMover: round 119
+protocols.grafting.CCDEndsGraftMover: round 120
+protocols.grafting.CCDEndsGraftMover: round 121
+protocols.grafting.CCDEndsGraftMover: round 122
+protocols.grafting.CCDEndsGraftMover: round 123
+protocols.grafting.CCDEndsGraftMover: round 124
+protocols.grafting.CCDEndsGraftMover: round 125
+protocols.grafting.CCDEndsGraftMover: round 126
+protocols.grafting.CCDEndsGraftMover: round 127
+protocols.grafting.CCDEndsGraftMover: round 128
+protocols.grafting.CCDEndsGraftMover: finish 32.9984
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 162 rotamers at 19 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.grafting.CCDEndsGraftMover: Graft meets ideal geometry true
+protocols.grafting.CCDEndsGraftMover: Complete
+basic.io.database: Database file opened: sampling/antibodies/cluster_center_dihedrals.txt
+protocols.antibody.AntibodyNumberingParser: Antibody numbering scheme definitions read successfully
+protocols.antibody.AntibodyNumberingParser: Antibody CDR definition read successfully
+antibody.AntibodyInfo: Successfully finished the CDR definition
+antibody.AntibodyInfo: AC Detecting Regular CDR H3 Stem Type
+antibody.AntibodyInfo: ARGGLEPRSVDYYYYGMDVW
+antibody.AntibodyInfo: AC Finished Detecting Regular CDR H3 Stem Type: KINKED
+antibody.AntibodyInfo: AC Finished Detecting Regular CDR H3 Stem Type: Kink: 1 Extended: 0
+antibody.AntibodyInfo: Setting up CDR Cluster for H1
+protocols.antibody.cluster.CDRClusterMatcher: Length: 13 Omega: TTTTTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H2
+protocols.antibody.cluster.CDRClusterMatcher: Length: 10 Omega: TTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for H3
+protocols.antibody.cluster.CDRClusterMatcher: Length: 19 Omega: TTTTTTTTTTTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for L1
+protocols.antibody.cluster.CDRClusterMatcher: Length: 16 Omega: TTTTTTTTTTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for L2
+protocols.antibody.cluster.CDRClusterMatcher: Length: 8 Omega: TTTTTTTT
+antibody.AntibodyInfo: Setting up CDR Cluster for L3
+protocols.antibody.cluster.CDRClusterMatcher: Length: 9 Omega: TTTTTTCTT
+core.conformation.Conformation: Found disulfide between residues 22 96
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.conformation.Conformation: current variant for 22 CYD
+core.conformation.Conformation: current variant for 96 CYD
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+protocols.relax.RelaxScriptManager: Reading relax scripts list from database.
+protocols.relax.RelaxScriptManager: Looking for no_cst_ramping.txt
+protocols.relax.RelaxScriptManager: ================== Reading script file: /cs/labs/dina/tomer.cohen13/Rosetta/main/database/sampling/relax_scripts/no_cst_ramping.txt ==================
+protocols.relax.RelaxScriptManager: repeat %%nrepeats%%
+protocols.relax.RelaxScriptManager: ramp_repack_min 0.02  0.01     1.0
+protocols.relax.RelaxScriptManager: ramp_repack_min 0.250 0.01     1.0
+protocols.relax.RelaxScriptManager: ramp_repack_min 0.550 0.01     1.0
+protocols.relax.RelaxScriptManager: ramp_repack_min 1     0.00001  1.0
+protocols.relax.RelaxScriptManager: accept_to_best
+protocols.relax.RelaxScriptManager: endrepeat
+protocols.relax.FastRelax: CMD: repeat  3945.28  0  0  0.55
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 3271 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -413.002  0.149624  0.149624  0.011
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2990 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -329.766  0.153219  0.153219  0.1375
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2676 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -289.7  0.159693  0.159693  0.3025
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2568 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -252.039  0.175788  0.175788  0.55
+protocols.relax.FastRelax: MRP: 0  -252.039  -252.039  0.175788  0.175788  
+protocols.relax.FastRelax: CMD: accept_to_best  -252.039  0.175788  0.175788  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -252.039  0.175788  0.175788  0.55
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 3043 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -426.211  0.163983  0.163983  0.011
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2975 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -341.48  0.157662  0.157662  0.1375
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2805 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -296.091  0.176502  0.176502  0.3025
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2690 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -257.827  0.183112  0.183112  0.55
+protocols.relax.FastRelax: MRP: 1  -257.827  -257.827  0.183112  0.183112  
+protocols.relax.FastRelax: CMD: accept_to_best  -257.827  0.183112  0.183112  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -257.827  0.183112  0.183112  0.55
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 3027 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -426.672  0.169073  0.169073  0.011
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2953 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -341.356  0.163115  0.163115  0.1375
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2810 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -295.752  0.18184  0.18184  0.3025
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2706 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -253.659  0.196802  0.196802  0.55
+protocols.relax.FastRelax: MRP: 2  -253.659  -257.827  0.183112  0.183112  
+protocols.relax.FastRelax: CMD: accept_to_best  -253.659  0.196802  0.196802  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -253.659  0.196802  0.196802  0.55
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 3088 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -429.667  0.170218  0.170218  0.011
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2962 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -342.085  0.161623  0.161623  0.1375
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2800 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -297.093  0.184085  0.184085  0.3025
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2674 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -257.895  0.195803  0.195803  0.55
+protocols.relax.FastRelax: MRP: 3  -257.895  -257.895  0.195803  0.195803  
+protocols.relax.FastRelax: CMD: accept_to_best  -257.895  0.195803  0.195803  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -257.895  0.195803  0.195803  0.55
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 3027 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -429.581  0.166399  0.166399  0.011
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2954 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -339.005  0.160089  0.160089  0.1375
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2810 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -297.266  0.186228  0.186228  0.3025
+core.pack.task.operation.TaskOperations: Enabling extra rotamers for chi 1 at all positions
+core.pack.pack_rotamers: built 2685 rotamers at 126 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: ramp_repack_min  -257.876  0.196047  0.196047  0.55
+protocols.relax.FastRelax: MRP: 4  -257.876  -257.895  0.195803  0.195803  
+protocols.relax.FastRelax: CMD: accept_to_best  -257.876  0.196047  0.196047  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -257.876  0.196047  0.196047  0.55
+protocols::checkpoint: Deleting checkpoints of FastRelax

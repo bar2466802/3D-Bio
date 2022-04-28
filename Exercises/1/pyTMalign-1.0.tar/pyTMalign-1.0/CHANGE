@@ -1,0 +1,43 @@
+[version 1.0]
+
+o pyTMalign.py
+  * pyTMalign() added
+  * pyTMalignComb() added
+  * pyTMalignMatrix() added
+  * __pyTMalign_setOptions() added
+  * __pyTMalign_setOutname() added
+  * __pyTMalign_setTarget() added
+  * __pyTMalign_setStructure() added
+  * __pyTMalign_readPdb() added
+  * __pyTMalign_readPdb_fromFile() added
+  * __pyTMalign_readPdb_fromMol() added
+  * __pyTMalign_fixList() added
+  * __pyTMalignComb_fixList() added
+  * __pyTMalignMatrix_fixList() added
+  * __pyTMalign_call_tmalign() added
+  * __pyTMalign_collectResults() added
+  __pyTMalign_sort() added
+
+
+o TMalignWrap.py
+  * TMalignWrap() added
+  * __TMalignWrap_getOpt() added
+
+
+o pyTMalign
+  * added
+
+o TMalign.pyf
+  * added
+
+
+o TMalign_compares.f
+  * added
+
+
+o TMalign.f
+  * added
+
+
+2006.07.08    Sunjoong LEE <sunjoong@gmail.com>
+

@@ -1,0 +1,162 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/AminoAcid.h
+vector
+-
+iostream
+-
+fstream
+-
+stdlib.h
+-
+PDB.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Atom.h
+Vector3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+PDB.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h
+AminoAcid.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/AminoAcid.h
+string
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/GeomHash.h
+HashLink.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashLink.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashLink.h
+HashResult.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashResult.h
+macros.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/macros.h
+math.h
+-
+cstdlib
+-
+iostream
+-
+cstddef
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/HashResult.h
+vector
+-
+cstddef
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Match.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+vector
+-
+algorithm
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.h
+math.h
+-
+iostream
+-
+macros.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/macros.h
+numerics.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/numerics.h
+Vector3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Molecule.h
+fstream
+-
+iostream
+-
+vector
+-
+PDB.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h
+string
+-
+iostream
+-
+vector
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+Matrix3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.h
+Rotation3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Rotation3.h
+iostream
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Rotation3.h
+iostream
+-
+numerics.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/numerics.h
+Matrix3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Triangle.h
+Vector3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h
+stdio.h
+-
+iostream
+-
+math.h
+-
+array
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/macros.h
+stdio.h
+-
+string
+-
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/numerics.h
+
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/structAlign.cc
+Vector3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Vector3.h
+Triangle.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Triangle.h
+Atom.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Atom.h
+RigidTrans3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/RigidTrans3.h
+Matrix3.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Matrix3.h
+Molecule.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Molecule.h
+PDB.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/PDB.h
+Match.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/Match.h
+GeomHash.h
+/cygdrive/d/Documents/School/2021/B/76562 - 3D Bio/Exercises/2/structAlign/GeomHash.h
+chrono
+-
+iostream
+-
+

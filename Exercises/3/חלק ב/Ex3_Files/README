@@ -1,0 +1,11 @@
+
+This folder contains all the files needed for exercise 3:
+
+- 6dlb.fa : sequence of the nanobody with PDB id 6dlb in a fasta format.
+- ref.pdb : reference model for the nanobody (the solved structure).
+- cluster_loops.py : a python file containing the function 'fast_rmsd()' (see its documentation). you can use this python
+                     for your code in part 2.
+- abH3.flags : parameters for Rosetta H3_modeling.
+- H3_modeling_100 : a folder containing 100 models generated using RosettaAntibody.
+- H3_modeling_100_scores.csv : csv file containing the RMSD and total score results of the models in H3_modeling_100 folder.
+- rmsd : program for calculating RMSD between two models.
